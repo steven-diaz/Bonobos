@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0C422AB1DDC269B00081807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422AA1DDC269B00081807 /* main.m */; };
+		B0C422AE1DDC269B00081807 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422AD1DDC269B00081807 /* AppDelegate.m */; };
+		B0C422B11DDC269B00081807 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422B01DDC269B00081807 /* ViewController.m */; };
+		B0C422B41DDC269B00081807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B21DDC269B00081807 /* Main.storyboard */; };
+		B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B51DDC269B00081807 /* Assets.xcassets */; };
+		B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */; };
+		B0C422C41DDC269B00081807 /* BonobosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422C31DDC269B00081807 /* BonobosTests.m */; };
+		B0C422CF1DDC269B00081807 /* BonobosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422CE1DDC269B00081807 /* BonobosUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0C422C01DDC269B00081807 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0C4229E1DDC269B00081807 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0C422A51DDC269B00081807;
+			remoteInfo = Bonobos;
+		};
+		B0C422CB1DDC269B00081807 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0C4229E1DDC269B00081807 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0C422A51DDC269B00081807;
+			remoteInfo = Bonobos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0C422A61DDC269B00081807 /* Bonobos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonobos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0C422AA1DDC269B00081807 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B0C422AC1DDC269B00081807 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B0C422AD1DDC269B00081807 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B0C422AF1DDC269B00081807 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B0C422B01DDC269B00081807 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B0C422B31DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0C422B51DDC269B00081807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0C422B81DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0C422BA1DDC269B00081807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0C422BF1DDC269B00081807 /* BonobosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonobosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0C422C31DDC269B00081807 /* BonobosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonobosTests.m; sourceTree = "<group>"; };
+		B0C422C51DDC269B00081807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0C422CA1DDC269B00081807 /* BonobosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonobosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0C422CE1DDC269B00081807 /* BonobosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonobosUITests.m; sourceTree = "<group>"; };
+		B0C422D01DDC269B00081807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0C422A31DDC269B00081807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0C422BC1DDC269B00081807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0C422C71DDC269B00081807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0C4229D1DDC269B00081807 = {
+			isa = PBXGroup;
+			children = (
+				B0C422A81DDC269B00081807 /* Bonobos */,
+				B0C422C21DDC269B00081807 /* BonobosTests */,
+				B0C422CD1DDC269B00081807 /* BonobosUITests */,
+				B0C422A71DDC269B00081807 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0C422A71DDC269B00081807 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0C422A61DDC269B00081807 /* Bonobos.app */,
+				B0C422BF1DDC269B00081807 /* BonobosTests.xctest */,
+				B0C422CA1DDC269B00081807 /* BonobosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0C422A81DDC269B00081807 /* Bonobos */ = {
+			isa = PBXGroup;
+			children = (
+				B0C422AC1DDC269B00081807 /* AppDelegate.h */,
+				B0C422AD1DDC269B00081807 /* AppDelegate.m */,
+				B0C422AF1DDC269B00081807 /* ViewController.h */,
+				B0C422B01DDC269B00081807 /* ViewController.m */,
+				B0C422B21DDC269B00081807 /* Main.storyboard */,
+				B0C422B51DDC269B00081807 /* Assets.xcassets */,
+				B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */,
+				B0C422BA1DDC269B00081807 /* Info.plist */,
+				B0C422A91DDC269B00081807 /* Supporting Files */,
+			);
+			path = Bonobos;
+			sourceTree = "<group>";
+		};
+		B0C422A91DDC269B00081807 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0C422AA1DDC269B00081807 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0C422C21DDC269B00081807 /* BonobosTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0C422C31DDC269B00081807 /* BonobosTests.m */,
+				B0C422C51DDC269B00081807 /* Info.plist */,
+			);
+			path = BonobosTests;
+			sourceTree = "<group>";
+		};
+		B0C422CD1DDC269B00081807 /* BonobosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B0C422CE1DDC269B00081807 /* BonobosUITests.m */,
+				B0C422D01DDC269B00081807 /* Info.plist */,
+			);
+			path = BonobosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0C422A51DDC269B00081807 /* Bonobos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0C422D31DDC269B00081807 /* Build configuration list for PBXNativeTarget "Bonobos" */;
+			buildPhases = (
+				B0C422A21DDC269B00081807 /* Sources */,
+				B0C422A31DDC269B00081807 /* Frameworks */,
+				B0C422A41DDC269B00081807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bonobos;
+			productName = Bonobos;
+			productReference = B0C422A61DDC269B00081807 /* Bonobos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0C422BE1DDC269B00081807 /* BonobosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0C422D61DDC269B00081807 /* Build configuration list for PBXNativeTarget "BonobosTests" */;
+			buildPhases = (
+				B0C422BB1DDC269B00081807 /* Sources */,
+				B0C422BC1DDC269B00081807 /* Frameworks */,
+				B0C422BD1DDC269B00081807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0C422C11DDC269B00081807 /* PBXTargetDependency */,
+			);
+			name = BonobosTests;
+			productName = BonobosTests;
+			productReference = B0C422BF1DDC269B00081807 /* BonobosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B0C422C91DDC269B00081807 /* BonobosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0C422D91DDC269B00081807 /* Build configuration list for PBXNativeTarget "BonobosUITests" */;
+			buildPhases = (
+				B0C422C61DDC269B00081807 /* Sources */,
+				B0C422C71DDC269B00081807 /* Frameworks */,
+				B0C422C81DDC269B00081807 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0C422CC1DDC269B00081807 /* PBXTargetDependency */,
+			);
+			name = BonobosUITests;
+			productName = BonobosUITests;
+			productReference = B0C422CA1DDC269B00081807 /* BonobosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0C4229E1DDC269B00081807 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Steven Diaz";
+				TargetAttributes = {
+					B0C422A51DDC269B00081807 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8CM9FHQ3D4;
+						ProvisioningStyle = Automatic;
+					};
+					B0C422BE1DDC269B00081807 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8CM9FHQ3D4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B0C422A51DDC269B00081807;
+					};
+					B0C422C91DDC269B00081807 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8CM9FHQ3D4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B0C422A51DDC269B00081807;
+					};
+				};
+			};
+			buildConfigurationList = B0C422A11DDC269B00081807 /* Build configuration list for PBXProject "Bonobos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0C4229D1DDC269B00081807;
+			productRefGroup = B0C422A71DDC269B00081807 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0C422A51DDC269B00081807 /* Bonobos */,
+				B0C422BE1DDC269B00081807 /* BonobosTests */,
+				B0C422C91DDC269B00081807 /* BonobosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0C422A41DDC269B00081807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */,
+				B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */,
+				B0C422B41DDC269B00081807 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0C422BD1DDC269B00081807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0C422C81DDC269B00081807 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0C422A21DDC269B00081807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0C422B11DDC269B00081807 /* ViewController.m in Sources */,
+				B0C422AE1DDC269B00081807 /* AppDelegate.m in Sources */,
+				B0C422AB1DDC269B00081807 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0C422BB1DDC269B00081807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0C422C41DDC269B00081807 /* BonobosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0C422C61DDC269B00081807 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0C422CF1DDC269B00081807 /* BonobosUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0C422C11DDC269B00081807 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0C422A51DDC269B00081807 /* Bonobos */;
+			targetProxy = B0C422C01DDC269B00081807 /* PBXContainerItemProxy */;
+		};
+		B0C422CC1DDC269B00081807 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0C422A51DDC269B00081807 /* Bonobos */;
+			targetProxy = B0C422CB1DDC269B00081807 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0C422B21DDC269B00081807 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0C422B31DDC269B00081807 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0C422B81DDC269B00081807 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0C422D11DDC269B00081807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B0C422D21DDC269B00081807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0C422D41DDC269B00081807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				INFOPLIST_FILE = Bonobos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.Bonobos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B0C422D51DDC269B00081807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				INFOPLIST_FILE = Bonobos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.Bonobos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B0C422D71DDC269B00081807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				INFOPLIST_FILE = BonobosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.BonobosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bonobos.app/Bonobos";
+			};
+			name = Debug;
+		};
+		B0C422D81DDC269B00081807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				INFOPLIST_FILE = BonobosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.BonobosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bonobos.app/Bonobos";
+			};
+			name = Release;
+		};
+		B0C422DA1DDC269B00081807 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				INFOPLIST_FILE = BonobosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.BonobosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Bonobos;
+			};
+			name = Debug;
+		};
+		B0C422DB1DDC269B00081807 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				INFOPLIST_FILE = BonobosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.BonobosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Bonobos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0C422A11DDC269B00081807 /* Build configuration list for PBXProject "Bonobos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0C422D11DDC269B00081807 /* Debug */,
+				B0C422D21DDC269B00081807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0C422D31DDC269B00081807 /* Build configuration list for PBXNativeTarget "Bonobos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0C422D41DDC269B00081807 /* Debug */,
+				B0C422D51DDC269B00081807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B0C422D61DDC269B00081807 /* Build configuration list for PBXNativeTarget "BonobosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0C422D71DDC269B00081807 /* Debug */,
+				B0C422D81DDC269B00081807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B0C422D91DDC269B00081807 /* Build configuration list for PBXNativeTarget "BonobosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0C422DA1DDC269B00081807 /* Debug */,
+				B0C422DB1DDC269B00081807 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0C4229E1DDC269B00081807 /* Project object */;
+}
