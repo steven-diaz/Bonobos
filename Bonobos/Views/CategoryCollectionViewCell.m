@@ -8,18 +8,28 @@
 
 #import "CategoryCollectionViewCell.h"
 
-#import "CategoryCellViewModel.h"
+#import "CategoryModel.h"
+
+#import "ImageCacheService.h"
 
 @interface CategoryCollectionViewCell()
+@property (nonatomic, strong) IBOutlet UIImageView *backgroundImage;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
+@property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 @end
 
 @implementation CategoryCollectionViewCell
 
-- (void)setCategoryCellViewModel:(CategoryCellViewModel *)categoryCellViewModel {
-    _categoryCellViewModel = categoryCellViewModel;
+- (void)setCategoryModel:(CategoryModel *)categoryModel {
+    _categoryModel = categoryModel;
     
-    self.nameLabel.text = @"Something";
+    self.nameLabel.text = categoryModel.name;
+    self.descriptionLabel.text = categoryModel.categoryDescription;
+    
+    __weak typeof (self) weakSelf = self;
+    [[ImageCacheService instance] imageForURL:categoryModel.imageURL completion:^(UIImage *image) {
+        [weakSelf.backgroundImage setImage:image];
+    }];
 }
 
 @end

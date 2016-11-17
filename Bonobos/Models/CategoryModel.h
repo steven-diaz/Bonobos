@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface CategoryModel : NSObject
+@property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSString *categoryDescription;
+@property (nonatomic, strong, readonly) NSURL *imageURL;
+
++ (instancetype)objectFromJSON:(NSDictionary *)json;
 
 @end

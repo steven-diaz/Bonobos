@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Categories View Controller-->
+        <!--Categories-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CategoriesViewController" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                             <constraint firstItem="a2S-9A-6Ua" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="g3m-CH-9aw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dxb-Me-BZy"/>
+                    <navigationItem key="navigationItem" title="Categories" id="dxb-Me-BZy"/>
                     <connections>
                         <outlet property="collectionView" destination="a2S-9A-6Ua" id="9UZ-II-9rt"/>
                     </connections>
@@ -60,9 +60,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HfR-al-Zwd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0cx-nW-53A">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0cx-nW-53A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

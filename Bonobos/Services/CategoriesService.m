@@ -10,6 +10,8 @@
 
 #import "AFNetworking.h"
 
+#import "CategoryModel.h"
+
 NSString * const CategoryAPIPath = @"https://api.bonobos.com/api/categories/";
 
 @implementation CategoriesService
@@ -21,9 +23,9 @@ NSString * const CategoryAPIPath = @"https://api.bonobos.com/api/categories/";
     NSString *path = [NSString stringWithFormat:@"%@%@", CategoryAPIPath, categoryName];
     
     [manager GET:path parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        if (success != nil) success([CategoryModel objectFromJSON:responseObject]);
     } failure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+        if (failure != nil) failure(error);
     }];
 }
 

@@ -12,11 +12,12 @@
 		B02366F11DDD5597008D2DB4 /* CategoriesService.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366F01DDD5597008D2DB4 /* CategoriesService.m */; };
 		B02366F61DDD58D6008D2DB4 /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366F41DDD58D6008D2DB4 /* CategoryCollectionViewCell.m */; };
 		B02366F71DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02366F51DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib */; };
-		B02366FA1DDD5A24008D2DB4 /* CategoryCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366F91DDD5A24008D2DB4 /* CategoryCellViewModel.m */; };
 		B051D2D91DDD5E410021898B /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2D81DDD5E410021898B /* CategoryModel.m */; };
-		B0C422AB1DDC269B00081807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422AA1DDC269B00081807 /* main.m */; };
-		B0C422AE1DDC269B00081807 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422AD1DDC269B00081807 /* AppDelegate.m */; };
-		B0C422B41DDC269B00081807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B21DDC269B00081807 /* Main.storyboard */; };
+		B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2DB1DDD6CB30021898B /* ImageCacheService.m */; };
+		B051D2E31DDD75290021898B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2E01DDD75290021898B /* AppDelegate.m */; };
+		B051D2E51DDD75290021898B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2E21DDD75290021898B /* main.m */; };
+		B051D2E81DDD75460021898B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B051D2E61DDD75460021898B /* Main.storyboard */; };
+		B051D2EA1DDD75750021898B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B051D2E91DDD75750021898B /* Info.plist */; };
 		B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B51DDC269B00081807 /* Assets.xcassets */; };
 		B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */; };
 		B0C422C41DDC269B00081807 /* BonobosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422C31DDC269B00081807 /* BonobosTests.m */; };
@@ -57,18 +58,18 @@
 		B02366F31DDD58D6008D2DB4 /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryCollectionViewCell.h; path = Views/CategoryCollectionViewCell.h; sourceTree = "<group>"; };
 		B02366F41DDD58D6008D2DB4 /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryCollectionViewCell.m; path = Views/CategoryCollectionViewCell.m; sourceTree = "<group>"; };
 		B02366F51DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryCollectionViewCell.xib; path = Views/CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
-		B02366F81DDD5A24008D2DB4 /* CategoryCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryCellViewModel.h; path = Models/CategoryCellViewModel.h; sourceTree = "<group>"; };
-		B02366F91DDD5A24008D2DB4 /* CategoryCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryCellViewModel.m; path = Models/CategoryCellViewModel.m; sourceTree = "<group>"; };
 		B051D2D71DDD5E410021898B /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryModel.h; path = Models/CategoryModel.h; sourceTree = "<group>"; };
 		B051D2D81DDD5E410021898B /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryModel.m; path = Models/CategoryModel.m; sourceTree = "<group>"; };
+		B051D2DA1DDD6CB30021898B /* ImageCacheService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCacheService.h; path = Services/ImageCacheService.h; sourceTree = "<group>"; };
+		B051D2DB1DDD6CB30021898B /* ImageCacheService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageCacheService.m; path = Services/ImageCacheService.m; sourceTree = "<group>"; };
+		B051D2DF1DDD75290021898B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Application/AppDelegate.h; sourceTree = "<group>"; };
+		B051D2E01DDD75290021898B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Application/AppDelegate.m; sourceTree = "<group>"; };
+		B051D2E21DDD75290021898B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Application/main.m; sourceTree = "<group>"; };
+		B051D2E71DDD75460021898B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B051D2E91DDD75750021898B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0C422A61DDC269B00081807 /* Bonobos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonobos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0C422AA1DDC269B00081807 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B0C422AC1DDC269B00081807 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B0C422AD1DDC269B00081807 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B0C422B31DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0C422B51DDC269B00081807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0C422B81DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B0C422BA1DDC269B00081807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0C422BF1DDC269B00081807 /* BonobosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonobosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C422C31DDC269B00081807 /* BonobosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonobosTests.m; sourceTree = "<group>"; };
 		B0C422C51DDC269B00081807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,8 +123,6 @@
 			children = (
 				B051D2D71DDD5E410021898B /* CategoryModel.h */,
 				B051D2D81DDD5E410021898B /* CategoryModel.m */,
-				B02366F81DDD5A24008D2DB4 /* CategoryCellViewModel.h */,
-				B02366F91DDD5A24008D2DB4 /* CategoryCellViewModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -133,6 +132,8 @@
 			children = (
 				B02366EF1DDD5597008D2DB4 /* CategoriesService.h */,
 				B02366F01DDD5597008D2DB4 /* CategoriesService.m */,
+				B051D2DA1DDD6CB30021898B /* ImageCacheService.h */,
+				B051D2DB1DDD6CB30021898B /* ImageCacheService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -154,6 +155,25 @@
 				B02366F51DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		B051D2DD1DDD75040021898B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B051D2DF1DDD75290021898B /* AppDelegate.h */,
+				B051D2E01DDD75290021898B /* AppDelegate.m */,
+				B051D2E21DDD75290021898B /* main.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		B051D2DE1DDD750B0021898B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B051D2E61DDD75460021898B /* Main.storyboard */,
+				B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		B0C4229D1DDC269B00081807 = {
@@ -185,23 +205,12 @@
 				B02366E91DDD543F008D2DB4 /* Models */,
 				B02366EB1DDD5448008D2DB4 /* Controllers */,
 				B02366F21DDD58BA008D2DB4 /* Views */,
-				B0C422AC1DDC269B00081807 /* AppDelegate.h */,
-				B0C422AD1DDC269B00081807 /* AppDelegate.m */,
-				B0C422B21DDC269B00081807 /* Main.storyboard */,
+				B051D2DE1DDD750B0021898B /* Storyboards */,
+				B051D2DD1DDD75040021898B /* Application */,
 				B0C422B51DDC269B00081807 /* Assets.xcassets */,
-				B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */,
-				B0C422BA1DDC269B00081807 /* Info.plist */,
-				B0C422A91DDC269B00081807 /* Supporting Files */,
+				B051D2E91DDD75750021898B /* Info.plist */,
 			);
 			path = Bonobos;
-			sourceTree = "<group>";
-		};
-		B0C422A91DDC269B00081807 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B0C422AA1DDC269B00081807 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		B0C422C21DDC269B00081807 /* BonobosTests */ = {
@@ -354,9 +363,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B02366F71DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib in Resources */,
+				B051D2E81DDD75460021898B /* Main.storyboard in Resources */,
 				B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */,
+				B051D2EA1DDD75750021898B /* Info.plist in Resources */,
 				B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */,
-				B0C422B41DDC269B00081807 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,12 +530,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B02366F61DDD58D6008D2DB4 /* CategoryCollectionViewCell.m in Sources */,
+				B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */,
+				B051D2E31DDD75290021898B /* AppDelegate.m in Sources */,
 				B051D2D91DDD5E410021898B /* CategoryModel.m in Sources */,
-				B0C422AE1DDC269B00081807 /* AppDelegate.m in Sources */,
 				B02366F11DDD5597008D2DB4 /* CategoriesService.m in Sources */,
+				B051D2E51DDD75290021898B /* main.m in Sources */,
 				B02366EE1DDD548B008D2DB4 /* CategoriesViewController.m in Sources */,
-				B02366FA1DDD5A24008D2DB4 /* CategoryCellViewModel.m in Sources */,
-				B0C422AB1DDC269B00081807 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,10 +571,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B0C422B21DDC269B00081807 /* Main.storyboard */ = {
+		B051D2E61DDD75460021898B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B0C422B31DDC269B00081807 /* Base */,
+				B051D2E71DDD75460021898B /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

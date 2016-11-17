@@ -16,6 +16,7 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 @interface CategoriesViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong, readonly) CategoriesService *categoriesService;
 @property (nonatomic, strong, readonly) NSArray *categoryPathNames;
+@property (nonatomic, strong, readonly) NSArray *categories;
 
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 @end
@@ -25,8 +26,16 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self styleNavigationBar];
     [self setupCategoryService];
     [self setupCollectionView];
+    
+    _categories = [NSArray new];
+    [self fetchCategories];
+}
+
+- (void)styleNavigationBar {
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 - (void)setupCategoryService {
@@ -44,28 +53,46 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
                            @"accessories",
                            @"shoes"
                            ];
-    
-    for (NSString *path in self.categoryPathNames) {
-        [self.categoriesService getCategory:path success:^(CategoryModel *category) {
-            int i = 0;
-        } failure:^(NSError *error) {
-            int i = 0;
-        }];
-    }
 }
 
 - (void)setupCollectionView {
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CategoryCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:CategoryCellReuseIdentifier];
+    [self.collectionView setContentInset:UIEdgeInsetsMake(10, 0, 0, 0)];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+}
+
+#pragma mark - Network Operations
+
+- (void)fetchCategories {
+    for (NSString *path in self.categoryPathNames) {
+        __weak typeof (self) weakSelf = self;
+        [self.categoriesService getCategory:path success:^(CategoryModel *category) {
+            [weakSelf insertCellForCategory:category];
+        } failure:^(NSError *error) {
+            NSLog(@"%@", error.localizedDescription);
+        }];
+    }
+}
+
+#pragma mark - Cell Insertion
+
+- (void)insertCellForCategory:(CategoryModel *)category {
+    NSMutableArray *mutableCategories = [NSMutableArray arrayWithArray:self.categories];
+    [mutableCategories addObject:category];
+    
+    _categories = mutableCategories.copy;
+    
+    [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.categories.count - 1 inSection:0]]];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(100, 100);
+    return CGSizeMake(self.collectionView.frame.size.width, 200);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 50;
+    return 20;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
@@ -75,11 +102,12 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.categoryPathNames.count;
+    return self.categories.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CategoryCollectionViewCell *categoryCell = [collectionView dequeueReusableCellWithReuseIdentifier:CategoryCellReuseIdentifier forIndexPath:indexPath];
+    categoryCell.categoryModel = [self.categories objectAtIndex:indexPath.row];
     return categoryCell;
 }
 

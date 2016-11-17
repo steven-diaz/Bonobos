@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class CategoryCellViewModel;
+@class CategoryModel;
 
 @interface CategoryCollectionViewCell : UICollectionViewCell
-@property (nonatomic, strong, readonly) CategoryCellViewModel *categoryCellViewModel;
+@property (nonatomic, strong) CategoryModel *categoryModel;
 
 @end
