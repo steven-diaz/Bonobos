@@ -13,7 +13,11 @@
 
 + (instancetype)instance;
 
-- (void)imageForURL:(NSURL *)url
+- (UIImage *)imageForURL:(NSURL *)url;
+
+- (void)addImage:(UIImage *)image forURL:(NSURL *)url;
+
+- (void)asyncImageForURL:(NSURL *)url
          completion:(void (^)(UIImage *image))completion;
 
 @end

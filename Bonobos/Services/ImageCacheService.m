@@ -32,9 +32,17 @@
     return self;
 }
 
-- (void)imageForURL:(NSURL *)url
-         completion:(void (^)(UIImage *image))completion {
-    UIImage *cachedImage = [self.imageCache objectForKey:url.absoluteString];
+- (UIImage *)imageForURL:(NSURL *)url {
+    return [self.imageCache objectForKey:url.absoluteString];
+}
+
+- (void)addImage:(UIImage *)image forURL:(NSURL *)url {
+    [self.imageCache setObject:image forKey:url.absoluteString];
+}
+
+- (void)asyncImageForURL:(NSURL *)url
+              completion:(void (^)(UIImage *image))completion {
+    UIImage *cachedImage = [self imageForURL:url];
     if (cachedImage != nil && completion != nil) {
         completion(cachedImage);
         return;
@@ -44,7 +52,7 @@
     dispatch_async(queue, ^{
         NSData *imageData = [NSData dataWithContentsOfURL:url];
         UIImage *downloadedImage = [UIImage imageWithData:imageData];
-        [self.imageCache setObject:downloadedImage forKey:url.absoluteString];
+        [self addImage:downloadedImage forURL:url];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             if (completion != nil) completion(downloadedImage);

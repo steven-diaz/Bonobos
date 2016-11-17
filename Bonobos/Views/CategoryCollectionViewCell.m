@@ -27,7 +27,7 @@
     self.descriptionLabel.text = categoryModel.categoryDescription;
     
     __weak typeof (self) weakSelf = self;
-    [[ImageCacheService instance] imageForURL:categoryModel.imageURL completion:^(UIImage *image) {
+    [[ImageCacheService instance] asyncImageForURL:categoryModel.imageURL completion:^(UIImage *image) {
         [weakSelf.backgroundImage setImage:image];
     }];
 }

@@ -21,9 +21,9 @@
 		B051D2ED1DDD78860021898B /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2EC1DDD78860021898B /* ProductModel.m */; };
 		B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */; };
 		B051D2F51DDD7C480021898B /* JSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F41DDD7C480021898B /* JSONObject.m */; };
+		B051D2F71DDD7FCA0021898B /* ImageCacheServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F61DDD7FCA0021898B /* ImageCacheServiceTests.m */; };
 		B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B51DDC269B00081807 /* Assets.xcassets */; };
 		B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */; };
-		B0C422C41DDC269B00081807 /* BonobosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422C31DDC269B00081807 /* BonobosTests.m */; };
 		B0C422CF1DDC269B00081807 /* BonobosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422CE1DDC269B00081807 /* BonobosUITests.m */; };
 		E51644635BD7927255194EEC /* libPods-BonobosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEEF2ED7C3F29B5F1DAB734 /* libPods-BonobosTests.a */; };
 		F302073DF3FBC205DE932D23 /* libPods-BonobosUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBC24FD099DE748AA6AF0A /* libPods-BonobosUITests.a */; };
@@ -76,11 +76,11 @@
 		B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+SafeExtract.m"; path = "Categories/NSDictionary+SafeExtract.m"; sourceTree = "<group>"; };
 		B051D2F31DDD7C480021898B /* JSONObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONObject.h; path = Models/JSONObject.h; sourceTree = "<group>"; };
 		B051D2F41DDD7C480021898B /* JSONObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONObject.m; path = Models/JSONObject.m; sourceTree = "<group>"; };
+		B051D2F61DDD7FCA0021898B /* ImageCacheServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCacheServiceTests.m; sourceTree = "<group>"; };
 		B0C422A61DDC269B00081807 /* Bonobos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonobos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C422B51DDC269B00081807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0C422B81DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0C422BF1DDC269B00081807 /* BonobosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonobosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B0C422C31DDC269B00081807 /* BonobosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonobosTests.m; sourceTree = "<group>"; };
 		B0C422C51DDC269B00081807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0C422CA1DDC269B00081807 /* BonobosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonobosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C422CE1DDC269B00081807 /* BonobosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonobosUITests.m; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		B0C422C21DDC269B00081807 /* BonobosTests */ = {
 			isa = PBXGroup;
 			children = (
-				B0C422C31DDC269B00081807 /* BonobosTests.m */,
+				B051D2F61DDD7FCA0021898B /* ImageCacheServiceTests.m */,
 				B0C422C51DDC269B00081807 /* Info.plist */,
 			);
 			path = BonobosTests;
@@ -569,7 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0C422C41DDC269B00081807 /* BonobosTests.m in Sources */,
+				B051D2F71DDD7FCA0021898B /* ImageCacheServiceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
