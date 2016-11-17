@@ -11,6 +11,7 @@
 @interface NSDictionary(SafeExtract)
 
 - (id)safeObjectForKey:(id)aKey;
+
 - (NSString *)safeStringForKey:(id)aKey;
 
 @end

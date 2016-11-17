@@ -12,6 +12,7 @@
 @interface ImageCacheService : NSObject
 
 + (instancetype)instance;
+
 - (void)imageForURL:(NSURL *)url
          completion:(void (^)(UIImage *image))completion;
 

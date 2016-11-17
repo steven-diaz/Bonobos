@@ -15,7 +15,7 @@ typedef void (^FailureBlock) (NSError *error);
 @interface CategoriesService : NSObject
 
 - (void)getCategory:(NSString *)categoryName
-success:(void (^)(CategoryModel *category))success
+            success:(void (^)(CategoryModel *category))success
             failure:(FailureBlock)failure;
 
 @end
