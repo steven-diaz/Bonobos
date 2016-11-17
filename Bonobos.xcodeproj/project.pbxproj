@@ -20,6 +20,7 @@
 		B051D2EA1DDD75750021898B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B051D2E91DDD75750021898B /* Info.plist */; };
 		B051D2ED1DDD78860021898B /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2EC1DDD78860021898B /* ProductModel.m */; };
 		B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */; };
+		B051D2F51DDD7C480021898B /* JSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F41DDD7C480021898B /* JSONObject.m */; };
 		B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B51DDC269B00081807 /* Assets.xcassets */; };
 		B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */; };
 		B0C422C41DDC269B00081807 /* BonobosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422C31DDC269B00081807 /* BonobosTests.m */; };
@@ -73,6 +74,8 @@
 		B051D2EC1DDD78860021898B /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = Models/ProductModel.m; sourceTree = "<group>"; };
 		B051D2EF1DDD7A0B0021898B /* NSDictionary+SafeExtract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+SafeExtract.h"; path = "Categories/NSDictionary+SafeExtract.h"; sourceTree = "<group>"; };
 		B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+SafeExtract.m"; path = "Categories/NSDictionary+SafeExtract.m"; sourceTree = "<group>"; };
+		B051D2F31DDD7C480021898B /* JSONObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONObject.h; path = Models/JSONObject.h; sourceTree = "<group>"; };
+		B051D2F41DDD7C480021898B /* JSONObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONObject.m; path = Models/JSONObject.m; sourceTree = "<group>"; };
 		B0C422A61DDC269B00081807 /* Bonobos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonobos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C422B51DDC269B00081807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0C422B81DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 		B02366E91DDD543F008D2DB4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B051D2F31DDD7C480021898B /* JSONObject.h */,
+				B051D2F41DDD7C480021898B /* JSONObject.m */,
 				B051D2D71DDD5E410021898B /* CategoryModel.h */,
 				B051D2D81DDD5E410021898B /* CategoryModel.m */,
 				B051D2EB1DDD78860021898B /* ProductModel.h */,
@@ -549,6 +554,7 @@
 			files = (
 				B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */,
 				B02366F61DDD58D6008D2DB4 /* CategoryCollectionViewCell.m in Sources */,
+				B051D2F51DDD7C480021898B /* JSONObject.m in Sources */,
 				B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */,
 				B051D2E31DDD75290021898B /* AppDelegate.m in Sources */,
 				B051D2ED1DDD78860021898B /* ProductModel.m in Sources */,

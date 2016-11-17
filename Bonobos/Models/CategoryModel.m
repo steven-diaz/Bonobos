@@ -17,30 +17,38 @@
 + (instancetype)objectFromJSON:(NSDictionary *)json {
     if (![json isKindOfClass:[NSDictionary class]]) return  nil;
     
-    NSString *name = [json objectForKey:@"name"];
-    NSString *description = [json objectForKey:@"meta_title"];
+    NSString *name = [json safeStringForKey:@"name"];
+    NSString *description = [json safeStringForKey:@"meta_title"];
     
     NSDictionary *imageDIct = [json safeObjectForKey:@"primary_image"];
     NSURL *imageURL = nil;
-    if (imageDIct != nil) imageURL = [NSURL URLWithString:[imageDIct objectForKey:@"large_url"]];
+    if (imageDIct != nil) imageURL = [NSURL URLWithString:[imageDIct safeObjectForKey:@"large_url"]];
     
     NSMutableArray *subCategories = [NSMutableArray new];
-    NSArray *childrenDict = [json objectForKey:@"children"];
+    NSArray *childrenDict = [json safeObjectForKey:@"children"];
     for (NSDictionary *child in childrenDict) {
         CategoryModel *subcategory = [CategoryModel objectFromJSON:child];
         if (subcategory != nil) [subCategories addObject:subcategory];
     }
     
-    return [[CategoryModel alloc] initWithName:name description:description imageURL:imageURL subCategories:subCategories];
+    NSMutableArray *products = [NSMutableArray new];
+    NSArray *productsDict = [json safeObjectForKey:@"category_items"];
+    for (NSDictionary *productDict in productsDict) {
+        ProductModel *product = [ProductModel objectFromJSON:productDict];
+        if (product != nil) [products addObject:product];
+    }
+    
+    return [[CategoryModel alloc] initWithName:name description:description imageURL:imageURL subCategories:subCategories products:products];
 }
 
-- (instancetype)initWithName:(NSString *)name description:(NSString *)description imageURL:(NSURL *)imageURL subCategories:(NSArray <CategoryModel *> *)subCategories {
+- (instancetype)initWithName:(NSString *)name description:(NSString *)description imageURL:(NSURL *)imageURL subCategories:(NSArray <CategoryModel *> *)subCategories products:(NSArray <ProductModel *> *)products {
     self = [super init];
     if (self) {
         _name = name;
         _categoryDescription = description;
         _imageURL = imageURL;
         _subCategories = subCategories;
+        _products = products;
     }
     return self;
 }

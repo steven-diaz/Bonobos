@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONObject.h"
 
-@interface ProductModel : NSObject
+@interface ProductModel : JSONObject
+
+@property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSString *productDescription;
+@property (nonatomic, strong, readonly) NSString *displayPrice;
+@property (nonatomic, strong, readonly) NSURL *imageURL;
 
 @end
