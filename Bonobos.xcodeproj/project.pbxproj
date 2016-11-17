@@ -18,6 +18,8 @@
 		B051D2E51DDD75290021898B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2E21DDD75290021898B /* main.m */; };
 		B051D2E81DDD75460021898B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B051D2E61DDD75460021898B /* Main.storyboard */; };
 		B051D2EA1DDD75750021898B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B051D2E91DDD75750021898B /* Info.plist */; };
+		B051D2ED1DDD78860021898B /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2EC1DDD78860021898B /* ProductModel.m */; };
+		B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */; };
 		B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B51DDC269B00081807 /* Assets.xcassets */; };
 		B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */; };
 		B0C422C41DDC269B00081807 /* BonobosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422C31DDC269B00081807 /* BonobosTests.m */; };
@@ -67,6 +69,10 @@
 		B051D2E21DDD75290021898B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Application/main.m; sourceTree = "<group>"; };
 		B051D2E71DDD75460021898B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B051D2E91DDD75750021898B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B051D2EB1DDD78860021898B /* ProductModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductModel.h; path = Models/ProductModel.h; sourceTree = "<group>"; };
+		B051D2EC1DDD78860021898B /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductModel.m; path = Models/ProductModel.m; sourceTree = "<group>"; };
+		B051D2EF1DDD7A0B0021898B /* NSDictionary+SafeExtract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+SafeExtract.h"; path = "Categories/NSDictionary+SafeExtract.h"; sourceTree = "<group>"; };
+		B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+SafeExtract.m"; path = "Categories/NSDictionary+SafeExtract.m"; sourceTree = "<group>"; };
 		B0C422A61DDC269B00081807 /* Bonobos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonobos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C422B51DDC269B00081807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0C422B81DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 			children = (
 				B051D2D71DDD5E410021898B /* CategoryModel.h */,
 				B051D2D81DDD5E410021898B /* CategoryModel.m */,
+				B051D2EB1DDD78860021898B /* ProductModel.h */,
+				B051D2EC1DDD78860021898B /* ProductModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -176,6 +184,15 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		B051D2EE1DDD79D20021898B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B051D2EF1DDD7A0B0021898B /* NSDictionary+SafeExtract.h */,
+				B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		B0C4229D1DDC269B00081807 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +223,7 @@
 				B02366EB1DDD5448008D2DB4 /* Controllers */,
 				B02366F21DDD58BA008D2DB4 /* Views */,
 				B051D2DE1DDD750B0021898B /* Storyboards */,
+				B051D2EE1DDD79D20021898B /* Categories */,
 				B051D2DD1DDD75040021898B /* Application */,
 				B0C422B51DDC269B00081807 /* Assets.xcassets */,
 				B051D2E91DDD75750021898B /* Info.plist */,
@@ -529,9 +547,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */,
 				B02366F61DDD58D6008D2DB4 /* CategoryCollectionViewCell.m in Sources */,
 				B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */,
 				B051D2E31DDD75290021898B /* AppDelegate.m in Sources */,
+				B051D2ED1DDD78860021898B /* ProductModel.m in Sources */,
 				B051D2D91DDD5E410021898B /* CategoryModel.m in Sources */,
 				B02366F11DDD5597008D2DB4 /* CategoriesService.m in Sources */,
 				B051D2E51DDD75290021898B /* main.m in Sources */,

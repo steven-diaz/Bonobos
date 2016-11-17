@@ -111,4 +111,10 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
     return categoryCell;
 }
 
+#pragma mark - UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 @end
