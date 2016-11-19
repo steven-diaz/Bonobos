@@ -127,17 +127,6 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
     }];
 }
 
-//- (void)insertCellForCategory:(CategoryModel *)category {
-//    NSMutableArray *mutableCategories = [NSMutableArray arrayWithArray:self.categories];
-//    [mutableCategories addObject:category];
-//
-//    _categories = mutableCategories.copy;
-//
-//    [self.tableView beginUpdates];
-//    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.categories.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-//    [self.tableView endUpdates];
-//}
-
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -153,7 +142,7 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CategoryModel *categoryModel = [self.categories objectAtIndex:indexPath.row];
-    return 170 + (64 * categoryModel.subCategories.count);
+    return CategoryCellImageHeight + (CategoryCellSubCategoryCellHeight * categoryModel.subCategories.count) + CategoryCellFooterHeight;
 }
 
 #pragma mark - UITableViewDelegate

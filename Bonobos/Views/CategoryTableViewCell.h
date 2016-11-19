@@ -1,5 +1,5 @@
 //
-//  CategoryCollectionViewCell.h
+//  CategoryTableViewCell.h
 //  Bonobos
 //
 //  Created by Steven Diaz on 11/16/16.
@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
+extern NSInteger const CategoryCellImageHeight;
+extern NSInteger const CategoryCellSubCategoryCellHeight;
+extern NSInteger const CategoryCellFooterHeight;
 
 @class CategoryModel;
 

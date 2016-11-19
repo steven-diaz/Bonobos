@@ -1,5 +1,5 @@
 //
-//  CategoryCollectionViewCell.m
+//  CategoryTableViewCell.m
 //  Bonobos
 //
 //  Created by Steven Diaz on 11/16/16.
@@ -12,6 +12,10 @@
 #import "CategorySubcategoryTableViewCell.h"
 
 #import "ImageCacheService.h"
+
+NSInteger const CategoryCellImageHeight = 170;
+NSInteger const CategoryCellSubCategoryCellHeight = 64;
+NSInteger const CategoryCellFooterHeight = 14;
 
 NSString * const CategorySubcategoryCellReuseIdentifier = @"CategorySubcategoryCellReuseIdentifier";
 
