@@ -9,8 +9,12 @@
 #import "CategoriesViewController.h"
 
 #import "CategoriesService.h"
-#import "CategoryTableViewCell.h"
 #import "CategoryModel.h"
+
+#import "CategoryTableViewCell.h"
+#import "LoadingView.h"
+
+#import "Masonry.h"
 
 NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 
@@ -20,8 +24,9 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 @property (nonatomic, strong, readonly) NSArray *categories;
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, assign) NSInteger completedRequests;
 
-@property (nonatomic, assign) NSInteger categoryRequestIndex;
+@property (nonatomic, strong) LoadingView *loadingView;
 @end
 
 @implementation CategoriesViewController
@@ -29,12 +34,13 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self startLoading];
     [self styleNavigationBar];
     [self setupCategoryService];
     [self setupTableView];
     
     _categories = [NSArray new];
-    [self fetchNextCategory];
+    [self fetchCategories];
 }
 
 - (void)styleNavigationBar {
@@ -56,46 +62,81 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
                            @"accessories",
                            @"shoes"
                            ];
-    
-    self.categoryRequestIndex = 0;
 }
 
 - (void)setupTableView {
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CategoryTableViewCell class]) bundle:nil] forCellReuseIdentifier:CategoryCellReuseIdentifier];
-    //self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView setContentInset:UIEdgeInsetsZero];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
 }
 
 #pragma mark - Network Operations
 
-- (void)fetchNextCategory {
-    if (self.categoryRequestIndex == self.categoryPathNames.count) return;
-    
-    NSString *categoryToFetch = [self.categoryPathNames objectAtIndex:self.categoryRequestIndex];
-    __weak typeof (self) weakSelf = self;
-    [self.categoriesService getCategory:categoryToFetch success:^(CategoryModel *category) {
-        [weakSelf insertCellForCategory:category];
-    } failure:^(NSError *error) {
-        NSLog(@"%@", error.localizedDescription);
-    }];
+- (void)fetchCategories {
+    for (NSString *path in self.categoryPathNames) {
+        __weak typeof (self) weakSelf = self;
+        [self.categoriesService getCategory:path success:^(CategoryModel *category) {
+            [weakSelf handleCategoryFetchSuccess:category];
+        } failure:^(NSError *error) {
+            [self handleCategoryFetchFailure:error];
+        }];
+    }
 }
 
-#pragma mark - Cell Insertion
-
-- (void)insertCellForCategory:(CategoryModel *)category {
+- (void)handleCategoryFetchSuccess:(CategoryModel *)category {
+    self.completedRequests++;
+    
     NSMutableArray *mutableCategories = [NSMutableArray arrayWithArray:self.categories];
     [mutableCategories addObject:category];
     
     _categories = mutableCategories.copy;
     
-    [self.tableView beginUpdates];
-    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.categories.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-    [self.tableView endUpdates];
-    
-    self.categoryRequestIndex++;
-    [self fetchNextCategory];
+    if (self.completedRequests == self.categoryPathNames.count) [self endLoading];
 }
+
+- (void)handleCategoryFetchFailure:(NSError *)error {
+    self.completedRequests++;
+    NSLog(@"%@", error.localizedDescription);
+    
+    if (self.completedRequests == self.categoryPathNames.count) [self endLoading];
+}
+
+#pragma mark - Loading
+
+- (void)startLoading {
+    if (self.loadingView != nil) return;
+    
+    self.loadingView = [[LoadingView alloc] init];
+    [self.navigationController.view addSubview:self.loadingView];
+    
+    [self.loadingView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.navigationController.view);
+    }];
+}
+
+- (void)endLoading {
+    if (self.loadingView == nil) return;
+    
+    [self.tableView reloadData];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.loadingView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.loadingView removeFromSuperview];
+        self.loadingView = nil;
+    }];
+}
+
+//- (void)insertCellForCategory:(CategoryModel *)category {
+//    NSMutableArray *mutableCategories = [NSMutableArray arrayWithArray:self.categories];
+//    [mutableCategories addObject:category];
+//
+//    _categories = mutableCategories.copy;
+//
+//    [self.tableView beginUpdates];
+//    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.categories.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+//    [self.tableView endUpdates];
+//}
 
 #pragma mark - UICollectionViewDataSource
 

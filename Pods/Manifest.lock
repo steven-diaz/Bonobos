@@ -14,13 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - LLARingSpinnerView (0.1.4)
+  - Masonry (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - LLARingSpinnerView
+  - Masonry
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  LLARingSpinnerView: 334c37fd53f25c86651cbb4c57f70b12d571d7a5
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
 
-PODFILE CHECKSUM: b29bf598454b8ce5edd4221f781d26ce4f0c63fa
+PODFILE CHECKSUM: 420ca6f8b70a8018adfc60babe4f4d6fa4e79168
 
 COCOAPODS: 1.1.1

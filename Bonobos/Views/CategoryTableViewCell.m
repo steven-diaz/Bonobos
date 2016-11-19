@@ -35,7 +35,6 @@ NSString * const CategorySubcategoryCellReuseIdentifier = @"CategorySubcategoryC
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    NSLog(@"%@%f", @"Setting height to ", self.subcategoryTableView.contentSize.height);
     self.tableViewHeightConstraint.constant = self.subcategoryTableView.contentSize.height;
 }
 

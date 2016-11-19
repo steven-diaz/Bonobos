@@ -1,0 +1,6 @@
+framework module Pods_BonobosTests {
+  umbrella header "Pods-BonobosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

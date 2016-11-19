@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB07BA03FD1847F3E30457F1 /* libPods-Bonobos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B940E89072C90AB5605DF0 /* libPods-Bonobos.a */; };
+		42E6404653939FD66DDE908F /* Pods_BonobosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDD2196D63824408DF117F4 /* Pods_BonobosUITests.framework */; };
+		43F93C3B0E756A3C0BEC4659 /* Pods_Bonobos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EBB2F18F4831CD13CC5764 /* Pods_Bonobos.framework */; };
+		4B019EA44102EB6E691B1DD7 /* Pods_BonobosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0765F410DFF5281B00D5DBA /* Pods_BonobosTests.framework */; };
 		B02366EE1DDD548B008D2DB4 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366ED1DDD548B008D2DB4 /* CategoriesViewController.m */; };
 		B02366F11DDD5597008D2DB4 /* CategoriesService.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366F01DDD5597008D2DB4 /* CategoriesService.m */; };
 		B03BAC1A1DE0A957007C24D4 /* Harriet-Italics.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC181DE0A957007C24D4 /* Harriet-Italics.ttf */; };
@@ -24,6 +26,7 @@
 		B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */; };
 		B051D2F51DDD7C480021898B /* JSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F41DDD7C480021898B /* JSONObject.m */; };
 		B051D2F71DDD7FCA0021898B /* ImageCacheServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F61DDD7FCA0021898B /* ImageCacheServiceTests.m */; };
+		B052B21A1DE0DF9C00EAB74E /* UIColor+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = B052B2191DE0DF9C00EAB74E /* UIColor+Extended.m */; };
 		B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B51DDC269B00081807 /* Assets.xcassets */; };
 		B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */; };
 		B0C422CF1DDC269B00081807 /* BonobosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422CE1DDC269B00081807 /* BonobosUITests.m */; };
@@ -31,8 +34,8 @@
 		B0F3AA571DE0BB6B0061C785 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F3AA551DE0BB6B0061C785 /* CategoryTableViewCell.xib */; };
 		B0F3AA5B1DE0C0440061C785 /* CategorySubcategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3AA591DE0C0440061C785 /* CategorySubcategoryTableViewCell.m */; };
 		B0F3AA5C1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F3AA5A1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib */; };
-		E51644635BD7927255194EEC /* libPods-BonobosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEEF2ED7C3F29B5F1DAB734 /* libPods-BonobosTests.a */; };
-		F302073DF3FBC205DE932D23 /* libPods-BonobosUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBC24FD099DE748AA6AF0A /* libPods-BonobosUITests.a */; };
+		B0F3AA5F1DE0D9620061C785 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3AA5E1DE0D9620061C785 /* LoadingView.m */; };
+		B0F3AA641DE0D9A40061C785 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F3AA631DE0D9A40061C785 /* LoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23B940E89072C90AB5605DF0 /* libPods-Bonobos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bonobos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B299852C298300A9F22063 /* Pods-BonobosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonobosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BonobosTests/Pods-BonobosTests.release.xcconfig"; sourceTree = "<group>"; };
-		53EBC24FD099DE748AA6AF0A /* libPods-BonobosUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BonobosUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EEEF2ED7C3F29B5F1DAB734 /* libPods-BonobosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BonobosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56EBB2F18F4831CD13CC5764 /* Pods_Bonobos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonobos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		963A8DBA5411F0361307261D /* Pods-Bonobos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonobos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonobos/Pods-Bonobos.release.xcconfig"; sourceTree = "<group>"; };
 		98F27D4CF10ADECB1D79A759 /* Pods-BonobosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonobosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BonobosUITests/Pods-BonobosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3A185EDCAA8B20A120F48BE /* Pods-BonobosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonobosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BonobosTests/Pods-BonobosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABDD2196D63824408DF117F4 /* Pods_BonobosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonobosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02366EC1DDD548B008D2DB4 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesViewController.h; path = Controllers/CategoriesViewController.h; sourceTree = "<group>"; };
 		B02366ED1DDD548B008D2DB4 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesViewController.m; path = Controllers/CategoriesViewController.m; sourceTree = "<group>"; };
 		B02366EF1DDD5597008D2DB4 /* CategoriesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesService.h; path = Services/CategoriesService.h; sourceTree = "<group>"; };
@@ -86,6 +88,8 @@
 		B051D2F31DDD7C480021898B /* JSONObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONObject.h; path = Models/JSONObject.h; sourceTree = "<group>"; };
 		B051D2F41DDD7C480021898B /* JSONObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONObject.m; path = Models/JSONObject.m; sourceTree = "<group>"; };
 		B051D2F61DDD7FCA0021898B /* ImageCacheServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCacheServiceTests.m; sourceTree = "<group>"; };
+		B052B2181DE0DF9C00EAB74E /* UIColor+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Extended.h"; path = "Categories/UIColor+Extended.h"; sourceTree = "<group>"; };
+		B052B2191DE0DF9C00EAB74E /* UIColor+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Extended.m"; path = "Categories/UIColor+Extended.m"; sourceTree = "<group>"; };
 		B0C422A61DDC269B00081807 /* Bonobos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonobos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C422B51DDC269B00081807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0C422B81DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,6 +104,10 @@
 		B0F3AA581DE0C0440061C785 /* CategorySubcategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategorySubcategoryTableViewCell.h; path = Views/CategorySubcategoryTableViewCell.h; sourceTree = "<group>"; };
 		B0F3AA591DE0C0440061C785 /* CategorySubcategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategorySubcategoryTableViewCell.m; path = Views/CategorySubcategoryTableViewCell.m; sourceTree = "<group>"; };
 		B0F3AA5A1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategorySubcategoryTableViewCell.xib; path = Views/CategorySubcategoryTableViewCell.xib; sourceTree = "<group>"; };
+		B0F3AA5D1DE0D9620061C785 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingView.h; path = Views/LoadingView.h; sourceTree = "<group>"; };
+		B0F3AA5E1DE0D9620061C785 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingView.m; path = Views/LoadingView.m; sourceTree = "<group>"; };
+		B0F3AA631DE0D9A40061C785 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingView.xib; path = Views/LoadingView.xib; sourceTree = "<group>"; };
+		E0765F410DFF5281B00D5DBA /* Pods_BonobosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BonobosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F29296A73A12D8294B5030 /* Pods-BonobosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonobosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BonobosUITests/Pods-BonobosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF5B583B9C630A94C18840AA /* Pods-Bonobos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonobos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonobos/Pods-Bonobos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB07BA03FD1847F3E30457F1 /* libPods-Bonobos.a in Frameworks */,
+				43F93C3B0E756A3C0BEC4659 /* Pods_Bonobos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E51644635BD7927255194EEC /* libPods-BonobosTests.a in Frameworks */,
+				4B019EA44102EB6E691B1DD7 /* Pods_BonobosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F302073DF3FBC205DE932D23 /* libPods-BonobosUITests.a in Frameworks */,
+				42E6404653939FD66DDE908F /* Pods_BonobosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,9 +143,9 @@
 		0580A6ACE7AF9F2331A3C627 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				23B940E89072C90AB5605DF0 /* libPods-Bonobos.a */,
-				6EEEF2ED7C3F29B5F1DAB734 /* libPods-BonobosTests.a */,
-				53EBC24FD099DE748AA6AF0A /* libPods-BonobosUITests.a */,
+				56EBB2F18F4831CD13CC5764 /* Pods_Bonobos.framework */,
+				E0765F410DFF5281B00D5DBA /* Pods_BonobosTests.framework */,
+				ABDD2196D63824408DF117F4 /* Pods_BonobosUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -178,12 +186,8 @@
 		B02366F21DDD58BA008D2DB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B0F3AA531DE0BB6B0061C785 /* CategoryTableViewCell.h */,
-				B0F3AA541DE0BB6B0061C785 /* CategoryTableViewCell.m */,
-				B0F3AA551DE0BB6B0061C785 /* CategoryTableViewCell.xib */,
-				B0F3AA581DE0C0440061C785 /* CategorySubcategoryTableViewCell.h */,
-				B0F3AA591DE0C0440061C785 /* CategorySubcategoryTableViewCell.m */,
-				B0F3AA5A1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib */,
+				B0F3AA601DE0D9670061C785 /* Loading */,
+				B0F3AA621DE0D97C0061C785 /* Category Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -240,6 +244,8 @@
 			children = (
 				B051D2EF1DDD7A0B0021898B /* NSDictionary+SafeExtract.h */,
 				B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */,
+				B052B2181DE0DF9C00EAB74E /* UIColor+Extended.h */,
+				B052B2191DE0DF9C00EAB74E /* UIColor+Extended.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -300,6 +306,29 @@
 				B0C422D01DDC269B00081807 /* Info.plist */,
 			);
 			path = BonobosUITests;
+			sourceTree = "<group>";
+		};
+		B0F3AA601DE0D9670061C785 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				B0F3AA5D1DE0D9620061C785 /* LoadingView.h */,
+				B0F3AA5E1DE0D9620061C785 /* LoadingView.m */,
+				B0F3AA631DE0D9A40061C785 /* LoadingView.xib */,
+			);
+			name = Loading;
+			sourceTree = "<group>";
+		};
+		B0F3AA621DE0D97C0061C785 /* Category Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B0F3AA531DE0BB6B0061C785 /* CategoryTableViewCell.h */,
+				B0F3AA541DE0BB6B0061C785 /* CategoryTableViewCell.m */,
+				B0F3AA551DE0BB6B0061C785 /* CategoryTableViewCell.xib */,
+				B0F3AA581DE0C0440061C785 /* CategorySubcategoryTableViewCell.h */,
+				B0F3AA591DE0C0440061C785 /* CategorySubcategoryTableViewCell.m */,
+				B0F3AA5A1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib */,
+			);
+			name = "Category Cells";
 			sourceTree = "<group>";
 		};
 		C81D04C09403DB55473F8A96 /* Pods */ = {
@@ -442,6 +471,7 @@
 				B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */,
 				B03BAC1E1DE0AA2C007C24D4 /* CircularStd-Black.otf in Resources */,
 				B03BAC1B1DE0A957007C24D4 /* Harriet.ttf in Resources */,
+				B0F3AA641DE0D9A40061C785 /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +635,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */,
+				B052B21A1DE0DF9C00EAB74E /* UIColor+Extended.m in Sources */,
+				B0F3AA5F1DE0D9620061C785 /* LoadingView.m in Sources */,
 				B051D2F51DDD7C480021898B /* JSONObject.m in Sources */,
 				B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */,
 				B051D2E31DDD75290021898B /* AppDelegate.m in Sources */,
