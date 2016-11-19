@@ -35,7 +35,7 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 }
 
 - (void)styleNavigationBar {
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bonobos_logo"]];
 }
 
 - (void)setupCategoryService {
@@ -57,7 +57,7 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 
 - (void)setupCollectionView {
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CategoryCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:CategoryCellReuseIdentifier];
-    [self.collectionView setContentInset:UIEdgeInsetsMake(10, 0, 0, 0)];
+    [self.collectionView setContentInset:UIEdgeInsetsZero];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
 }
 

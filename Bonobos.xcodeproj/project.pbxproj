@@ -12,6 +12,10 @@
 		B02366F11DDD5597008D2DB4 /* CategoriesService.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366F01DDD5597008D2DB4 /* CategoriesService.m */; };
 		B02366F61DDD58D6008D2DB4 /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366F41DDD58D6008D2DB4 /* CategoryCollectionViewCell.m */; };
 		B02366F71DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02366F51DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib */; };
+		B03BAC1A1DE0A957007C24D4 /* Harriet-Italics.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC181DE0A957007C24D4 /* Harriet-Italics.ttf */; };
+		B03BAC1B1DE0A957007C24D4 /* Harriet.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC191DE0A957007C24D4 /* Harriet.ttf */; };
+		B03BAC1E1DE0AA2C007C24D4 /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC1C1DE0AA2C007C24D4 /* CircularStd-Black.otf */; };
+		B03BAC1F1DE0AA2C007C24D4 /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC1D1DE0AA2C007C24D4 /* CircularStd-Medium.otf */; };
 		B051D2D91DDD5E410021898B /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2D81DDD5E410021898B /* CategoryModel.m */; };
 		B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2DB1DDD6CB30021898B /* ImageCacheService.m */; };
 		B051D2E31DDD75290021898B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2E01DDD75290021898B /* AppDelegate.m */; };
@@ -61,6 +65,10 @@
 		B02366F31DDD58D6008D2DB4 /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryCollectionViewCell.h; path = Views/CategoryCollectionViewCell.h; sourceTree = "<group>"; };
 		B02366F41DDD58D6008D2DB4 /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryCollectionViewCell.m; path = Views/CategoryCollectionViewCell.m; sourceTree = "<group>"; };
 		B02366F51DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryCollectionViewCell.xib; path = Views/CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		B03BAC181DE0A957007C24D4 /* Harriet-Italics.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Harriet-Italics.ttf"; path = "Resources/Fonts/Harriet-Italics.ttf"; sourceTree = "<group>"; };
+		B03BAC191DE0A957007C24D4 /* Harriet.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Harriet.ttf; path = Resources/Fonts/Harriet.ttf; sourceTree = "<group>"; };
+		B03BAC1C1DE0AA2C007C24D4 /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CircularStd-Black.otf"; path = "Resources/Fonts/CircularStd-Black.otf"; sourceTree = "<group>"; };
+		B03BAC1D1DE0AA2C007C24D4 /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CircularStd-Medium.otf"; path = "Resources/Fonts/CircularStd-Medium.otf"; sourceTree = "<group>"; };
 		B051D2D71DDD5E410021898B /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryModel.h; path = Models/CategoryModel.h; sourceTree = "<group>"; };
 		B051D2D81DDD5E410021898B /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryModel.m; path = Models/CategoryModel.m; sourceTree = "<group>"; };
 		B051D2DA1DDD6CB30021898B /* ImageCacheService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCacheService.h; path = Services/ImageCacheService.h; sourceTree = "<group>"; };
@@ -170,6 +178,25 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		B03BAC0E1DE0A767007C24D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B03BAC0F1DE0A76E007C24D4 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B03BAC0F1DE0A76E007C24D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B03BAC1C1DE0AA2C007C24D4 /* CircularStd-Black.otf */,
+				B03BAC1D1DE0AA2C007C24D4 /* CircularStd-Medium.otf */,
+				B03BAC181DE0A957007C24D4 /* Harriet-Italics.ttf */,
+				B03BAC191DE0A957007C24D4 /* Harriet.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		B051D2DD1DDD75040021898B /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +257,7 @@
 				B051D2DE1DDD750B0021898B /* Storyboards */,
 				B051D2EE1DDD79D20021898B /* Categories */,
 				B051D2DD1DDD75040021898B /* Application */,
+				B03BAC0E1DE0A767007C24D4 /* Resources */,
 				B0C422B51DDC269B00081807 /* Assets.xcassets */,
 				B051D2E91DDD75750021898B /* Info.plist */,
 			);
@@ -387,9 +415,13 @@
 			files = (
 				B02366F71DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib in Resources */,
 				B051D2E81DDD75460021898B /* Main.storyboard in Resources */,
+				B03BAC1F1DE0AA2C007C24D4 /* CircularStd-Medium.otf in Resources */,
+				B03BAC1A1DE0A957007C24D4 /* Harriet-Italics.ttf in Resources */,
 				B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */,
 				B051D2EA1DDD75750021898B /* Info.plist in Resources */,
 				B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */,
+				B03BAC1E1DE0AA2C007C24D4 /* CircularStd-Black.otf in Resources */,
+				B03BAC1B1DE0A957007C24D4 /* Harriet.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
