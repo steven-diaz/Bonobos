@@ -30,7 +30,7 @@
             make.edges.equalTo(self);
         }];
         
-        self.spinnerView.tintColor = [UIColor bonobosRed];
+        self.spinnerView.tintColor = [UIColor bonobosBlue];
         [self.spinnerView startAnimating];
     }
     return self;

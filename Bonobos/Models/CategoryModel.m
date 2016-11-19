@@ -21,6 +21,7 @@
     NSString *description = [json safeStringForKey:@"meta_title"];
     
     NSDictionary *imageDIct = [json safeObjectForKey:@"primary_image"];
+    if (imageDIct == nil) imageDIct = [json safeObjectForKey:@"secondary_image"];
     NSURL *imageURL = nil;
     if (imageDIct != nil) imageURL = [NSURL URLWithString:[imageDIct safeObjectForKey:@"large_url"]];
     

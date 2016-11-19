@@ -11,6 +11,7 @@
 #import "CategoriesService.h"
 #import "CategoryModel.h"
 
+#import "ProductsViewController.h"
 #import "CategoryTableViewCell.h"
 #import "LoadingView.h"
 
@@ -18,13 +19,16 @@
 
 NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 
-@interface CategoriesViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface CategoriesViewController () <UITableViewDataSource, CategoryTableViewCellDelegate>
 @property (nonatomic, strong, readonly) CategoriesService *categoriesService;
 @property (nonatomic, strong, readonly) NSArray *categoryPathNames;
-@property (nonatomic, strong, readonly) NSArray *categories;
+@property (nonatomic, strong, readonly) NSMutableArray *categories;
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 @property (nonatomic, assign) NSInteger completedRequests;
+@property (nonatomic, strong) NSMutableArray *activeRequests;
+@property (nonatomic, assign) BOOL loading;
 
 @property (nonatomic, strong) LoadingView *loadingView;
 @end
@@ -39,7 +43,6 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
     [self setupCategoryService];
     [self setupTableView];
     
-    _categories = [NSArray new];
     [self fetchCategories];
 }
 
@@ -62,6 +65,7 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
                            @"accessories",
                            @"shoes"
                            ];
+    _categories = [NSMutableArray arrayWithArray:_categoryPathNames];
 }
 
 - (void)setupTableView {
@@ -73,23 +77,25 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 #pragma mark - Network Operations
 
 - (void)fetchCategories {
+    self.activeRequests = [NSMutableArray new];
+    
     for (NSString *path in self.categoryPathNames) {
         __weak typeof (self) weakSelf = self;
-        [self.categoriesService getCategory:path success:^(CategoryModel *category) {
-            [weakSelf handleCategoryFetchSuccess:category];
+        NSURLSessionTask *task = [self.categoriesService getCategory:path success:^(CategoryModel *category, NSURLSessionTask *task) {
+            [weakSelf handleCategoryFetchSuccess:category task:task];
         } failure:^(NSError *error) {
             [self handleCategoryFetchFailure:error];
         }];
+        
+        [self.activeRequests addObject:task];
     }
 }
 
-- (void)handleCategoryFetchSuccess:(CategoryModel *)category {
+- (void)handleCategoryFetchSuccess:(CategoryModel *)category task:(NSURLSessionTask *)task {
     self.completedRequests++;
     
-    NSMutableArray *mutableCategories = [NSMutableArray arrayWithArray:self.categories];
-    [mutableCategories addObject:category];
-    
-    _categories = mutableCategories.copy;
+    NSInteger index = [self.activeRequests indexOfObject:task];
+    [self.categories replaceObjectAtIndex:index withObject:category];
     
     if (self.completedRequests == self.categoryPathNames.count) [self endLoading];
 }
@@ -106,6 +112,8 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 - (void)startLoading {
     if (self.loadingView != nil) return;
     
+    self.loading = YES;
+    
     self.loadingView = [[LoadingView alloc] init];
     [self.navigationController.view addSubview:self.loadingView];
     
@@ -117,6 +125,7 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 - (void)endLoading {
     if (self.loadingView == nil) return;
     
+    self.loading = NO;
     [self.tableView reloadData];
     
     [UIView animateWithDuration:0.25 animations:^{
@@ -130,11 +139,12 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.categories.count;
+    return self.loading ? 0 : self.categories.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CategoryTableViewCell *categoryCell = [tableView dequeueReusableCellWithIdentifier:CategoryCellReuseIdentifier forIndexPath:indexPath];
+    categoryCell.delegate = self;
     categoryCell.categoryModel = [self.categories objectAtIndex:indexPath.row];
     return categoryCell;
 }
@@ -145,10 +155,14 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
     return CategoryCellImageHeight + (CategoryCellSubCategoryCellHeight * categoryModel.subCategories.count) + CategoryCellFooterHeight;
 }
 
-#pragma mark - UITableViewDelegate
+#pragma mark - CategoryTableViewCellDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)categoryTableViewCell:(CategoryTableViewCell *)cell didSelectCategory:(CategoryModel *)category {
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ProductsViewController * productsVC = (ProductsViewController *)[sb instantiateViewControllerWithIdentifier:@"ProductsViewController"];
+    productsVC.category = category;
     
+    [self.navigationController pushViewController:productsVC animated:YES];
 }
 
 @end

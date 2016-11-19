@@ -32,7 +32,6 @@ NSString * const CategorySubcategoryCellReuseIdentifier = @"CategorySubcategoryC
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    [self.backgroundImage setImage:nil];
     [self.subcategoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([CategorySubcategoryTableViewCell class]) bundle:nil] forCellReuseIdentifier:CategorySubcategoryCellReuseIdentifier];
 }
 
@@ -49,10 +48,13 @@ NSString * const CategorySubcategoryCellReuseIdentifier = @"CategorySubcategoryC
     self.nameLabel.text = categoryModel.name;
     self.descriptionLabel.text = categoryModel.categoryDescription;
     
-    __weak typeof (self) weakSelf = self;
-    [[ImageCacheService instance] asyncImageForURL:categoryModel.imageURL completion:^(UIImage *image) {
-        [weakSelf.backgroundImage setImage:image];
-    }];
+    [self.backgroundImage setImage:nil];
+    if (categoryModel.imageURL != nil) {
+        __weak typeof (self) weakSelf = self;
+        [[ImageCacheService instance] asyncImageForURL:categoryModel.imageURL completion:^(UIImage *image) {
+            [weakSelf.backgroundImage setImage:image];
+        }];
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -74,7 +76,9 @@ NSString * const CategorySubcategoryCellReuseIdentifier = @"CategorySubcategoryC
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CategoryModel *category = [self.categoryModel.subCategories objectAtIndex:indexPath.row];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if ([self.delegate respondsToSelector:@selector(categoryTableViewCell:didSelectCategory:)]) [self.delegate categoryTableViewCell:self didSelectCategory:category];
 }
 
 @end

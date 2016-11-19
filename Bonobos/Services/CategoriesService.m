@@ -16,14 +16,14 @@ NSString * const CategoryAPIPath = @"https://api.bonobos.com/api/categories/";
 
 @implementation CategoriesService
 
-- (void)getCategory:(NSString *)categoryName
-            success:(void (^)(CategoryModel *))success
+- (NSURLSessionTask *)getCategory:(NSString *)categoryName
+            success:(void (^)(CategoryModel *, NSURLSessionTask *))success
             failure:(FailureBlock)failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSString *path = [NSString stringWithFormat:@"%@%@", CategoryAPIPath, categoryName];
     
-    [manager GET:path parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        if (success != nil) success([CategoryModel objectFromJSON:responseObject]);
+    return [manager GET:path parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        if (success != nil) success([CategoryModel objectFromJSON:responseObject], task);
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         if (failure != nil) failure(error);
     }];

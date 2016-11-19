@@ -12,6 +12,10 @@
 		4B019EA44102EB6E691B1DD7 /* Pods_BonobosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0765F410DFF5281B00D5DBA /* Pods_BonobosTests.framework */; };
 		B02366EE1DDD548B008D2DB4 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366ED1DDD548B008D2DB4 /* CategoriesViewController.m */; };
 		B02366F11DDD5597008D2DB4 /* CategoriesService.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366F01DDD5597008D2DB4 /* CategoriesService.m */; };
+		B036957C1DE0FB470006267A /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B036957A1DE0FB470006267A /* ProductCollectionViewCell.m */; };
+		B036957D1DE0FB470006267A /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B036957B1DE0FB470006267A /* ProductCollectionViewCell.xib */; };
+		B03695841DE109B00006267A /* ProductCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B03695831DE109B00006267A /* ProductCollectionViewFlowLayout.m */; };
+		B03695871DE118B60006267A /* LoadingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B03695861DE118B60006267A /* LoadingImageView.m */; };
 		B03BAC1A1DE0A957007C24D4 /* Harriet-Italics.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC181DE0A957007C24D4 /* Harriet-Italics.ttf */; };
 		B03BAC1B1DE0A957007C24D4 /* Harriet.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC191DE0A957007C24D4 /* Harriet.ttf */; };
 		B03BAC1E1DE0AA2C007C24D4 /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC1C1DE0AA2C007C24D4 /* CircularStd-Black.otf */; };
@@ -27,6 +31,7 @@
 		B051D2F51DDD7C480021898B /* JSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F41DDD7C480021898B /* JSONObject.m */; };
 		B051D2F71DDD7FCA0021898B /* ImageCacheServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F61DDD7FCA0021898B /* ImageCacheServiceTests.m */; };
 		B052B21A1DE0DF9C00EAB74E /* UIColor+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = B052B2191DE0DF9C00EAB74E /* UIColor+Extended.m */; };
+		B052B21D1DE0E9C900EAB74E /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B052B21C1DE0E9C900EAB74E /* ProductsViewController.m */; };
 		B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B51DDC269B00081807 /* Assets.xcassets */; };
 		B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */; };
 		B0C422CF1DDC269B00081807 /* BonobosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422CE1DDC269B00081807 /* BonobosUITests.m */; };
@@ -66,6 +71,13 @@
 		B02366ED1DDD548B008D2DB4 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesViewController.m; path = Controllers/CategoriesViewController.m; sourceTree = "<group>"; };
 		B02366EF1DDD5597008D2DB4 /* CategoriesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesService.h; path = Services/CategoriesService.h; sourceTree = "<group>"; };
 		B02366F01DDD5597008D2DB4 /* CategoriesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesService.m; path = Services/CategoriesService.m; sourceTree = "<group>"; };
+		B03695791DE0FB470006267A /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCollectionViewCell.h; path = Views/ProductCollectionViewCell.h; sourceTree = "<group>"; };
+		B036957A1DE0FB470006267A /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductCollectionViewCell.m; path = Views/ProductCollectionViewCell.m; sourceTree = "<group>"; };
+		B036957B1DE0FB470006267A /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductCollectionViewCell.xib; path = Views/ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		B03695821DE109B00006267A /* ProductCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductCollectionViewFlowLayout.h; path = Views/ProductCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		B03695831DE109B00006267A /* ProductCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductCollectionViewFlowLayout.m; path = Views/ProductCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		B03695851DE118B60006267A /* LoadingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingImageView.h; path = Views/LoadingImageView.h; sourceTree = "<group>"; };
+		B03695861DE118B60006267A /* LoadingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingImageView.m; path = Views/LoadingImageView.m; sourceTree = "<group>"; };
 		B03BAC181DE0A957007C24D4 /* Harriet-Italics.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Harriet-Italics.ttf"; path = "Resources/Fonts/Harriet-Italics.ttf"; sourceTree = "<group>"; };
 		B03BAC191DE0A957007C24D4 /* Harriet.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Harriet.ttf; path = Resources/Fonts/Harriet.ttf; sourceTree = "<group>"; };
 		B03BAC1C1DE0AA2C007C24D4 /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CircularStd-Black.otf"; path = "Resources/Fonts/CircularStd-Black.otf"; sourceTree = "<group>"; };
@@ -90,6 +102,8 @@
 		B051D2F61DDD7FCA0021898B /* ImageCacheServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCacheServiceTests.m; sourceTree = "<group>"; };
 		B052B2181DE0DF9C00EAB74E /* UIColor+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Extended.h"; path = "Categories/UIColor+Extended.h"; sourceTree = "<group>"; };
 		B052B2191DE0DF9C00EAB74E /* UIColor+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Extended.m"; path = "Categories/UIColor+Extended.m"; sourceTree = "<group>"; };
+		B052B21B1DE0E9C900EAB74E /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsViewController.h; path = Controllers/ProductsViewController.h; sourceTree = "<group>"; };
+		B052B21C1DE0E9C900EAB74E /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductsViewController.m; path = Controllers/ProductsViewController.m; sourceTree = "<group>"; };
 		B0C422A61DDC269B00081807 /* Bonobos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonobos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C422B51DDC269B00081807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0C422B81DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -179,6 +193,8 @@
 			children = (
 				B02366EC1DDD548B008D2DB4 /* CategoriesViewController.h */,
 				B02366ED1DDD548B008D2DB4 /* CategoriesViewController.m */,
+				B052B21B1DE0E9C900EAB74E /* ProductsViewController.h */,
+				B052B21C1DE0E9C900EAB74E /* ProductsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -186,10 +202,31 @@
 		B02366F21DDD58BA008D2DB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B036957E1DE0FFD90006267A /* Layout */,
 				B0F3AA601DE0D9670061C785 /* Loading */,
+				B03695781DE0FB2C0006267A /* Product Cells */,
 				B0F3AA621DE0D97C0061C785 /* Category Cells */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		B03695781DE0FB2C0006267A /* Product Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B03695791DE0FB470006267A /* ProductCollectionViewCell.h */,
+				B036957A1DE0FB470006267A /* ProductCollectionViewCell.m */,
+				B036957B1DE0FB470006267A /* ProductCollectionViewCell.xib */,
+			);
+			name = "Product Cells";
+			sourceTree = "<group>";
+		};
+		B036957E1DE0FFD90006267A /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B03695821DE109B00006267A /* ProductCollectionViewFlowLayout.h */,
+				B03695831DE109B00006267A /* ProductCollectionViewFlowLayout.m */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 		B03BAC0E1DE0A767007C24D4 /* Resources */ = {
@@ -314,6 +351,8 @@
 				B0F3AA5D1DE0D9620061C785 /* LoadingView.h */,
 				B0F3AA5E1DE0D9620061C785 /* LoadingView.m */,
 				B0F3AA631DE0D9A40061C785 /* LoadingView.xib */,
+				B03695851DE118B60006267A /* LoadingImageView.h */,
+				B03695861DE118B60006267A /* LoadingImageView.m */,
 			);
 			name = Loading;
 			sourceTree = "<group>";
@@ -467,6 +506,7 @@
 				B0F3AA5C1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib in Resources */,
 				B03BAC1F1DE0AA2C007C24D4 /* CircularStd-Medium.otf in Resources */,
 				B03BAC1A1DE0A957007C24D4 /* Harriet-Italics.ttf in Resources */,
+				B036957D1DE0FB470006267A /* ProductCollectionViewCell.xib in Resources */,
 				B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */,
 				B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */,
 				B03BAC1E1DE0AA2C007C24D4 /* CircularStd-Black.otf in Resources */,
@@ -635,7 +675,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */,
+				B036957C1DE0FB470006267A /* ProductCollectionViewCell.m in Sources */,
 				B052B21A1DE0DF9C00EAB74E /* UIColor+Extended.m in Sources */,
+				B052B21D1DE0E9C900EAB74E /* ProductsViewController.m in Sources */,
 				B0F3AA5F1DE0D9620061C785 /* LoadingView.m in Sources */,
 				B051D2F51DDD7C480021898B /* JSONObject.m in Sources */,
 				B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */,
@@ -646,6 +688,8 @@
 				B0F3AA561DE0BB6B0061C785 /* CategoryTableViewCell.m in Sources */,
 				B02366F11DDD5597008D2DB4 /* CategoriesService.m in Sources */,
 				B051D2E51DDD75290021898B /* main.m in Sources */,
+				B03695841DE109B00006267A /* ProductCollectionViewFlowLayout.m in Sources */,
+				B03695871DE118B60006267A /* LoadingImageView.m in Sources */,
 				B02366EE1DDD548B008D2DB4 /* CategoriesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

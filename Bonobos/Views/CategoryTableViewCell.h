@@ -12,9 +12,18 @@ extern NSInteger const CategoryCellImageHeight;
 extern NSInteger const CategoryCellSubCategoryCellHeight;
 extern NSInteger const CategoryCellFooterHeight;
 
+@class CategoryModel, CategoryTableViewCell;
+
+@protocol CategoryTableViewCellDelegate <NSObject>
+
+- (void)categoryTableViewCell:(CategoryTableViewCell *)cell didSelectCategory:(CategoryModel *)category;
+
+@end
+
 @class CategoryModel;
 
 @interface CategoryTableViewCell : UITableViewCell
 @property (nonatomic, strong) CategoryModel *categoryModel;
+@property (nonatomic, weak) id<CategoryTableViewCellDelegate> delegate;
 
 @end

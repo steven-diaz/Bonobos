@@ -37,7 +37,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66k-OL-Grf" userLabel="Labels">
-                                <rect key="frame" x="20" y="52" width="482" height="66.5"/>
+                                <rect key="frame" x="20" y="52.5" width="482" height="66.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqj-yo-VKf">
                                         <rect key="frame" x="0.0" y="0.0" width="482" height="35.5"/>
