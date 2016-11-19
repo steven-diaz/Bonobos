@@ -10,18 +10,16 @@
 		AB07BA03FD1847F3E30457F1 /* libPods-Bonobos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B940E89072C90AB5605DF0 /* libPods-Bonobos.a */; };
 		B02366EE1DDD548B008D2DB4 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366ED1DDD548B008D2DB4 /* CategoriesViewController.m */; };
 		B02366F11DDD5597008D2DB4 /* CategoriesService.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366F01DDD5597008D2DB4 /* CategoriesService.m */; };
-		B02366F61DDD58D6008D2DB4 /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B02366F41DDD58D6008D2DB4 /* CategoryCollectionViewCell.m */; };
-		B02366F71DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B02366F51DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib */; };
 		B03BAC1A1DE0A957007C24D4 /* Harriet-Italics.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC181DE0A957007C24D4 /* Harriet-Italics.ttf */; };
 		B03BAC1B1DE0A957007C24D4 /* Harriet.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC191DE0A957007C24D4 /* Harriet.ttf */; };
 		B03BAC1E1DE0AA2C007C24D4 /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC1C1DE0AA2C007C24D4 /* CircularStd-Black.otf */; };
 		B03BAC1F1DE0AA2C007C24D4 /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B03BAC1D1DE0AA2C007C24D4 /* CircularStd-Medium.otf */; };
+		B03BAC231DE0AE93007C24D4 /* XCTestCase+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B03BAC221DE0AE93007C24D4 /* XCTestCase+Utilities.m */; };
 		B051D2D91DDD5E410021898B /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2D81DDD5E410021898B /* CategoryModel.m */; };
 		B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2DB1DDD6CB30021898B /* ImageCacheService.m */; };
 		B051D2E31DDD75290021898B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2E01DDD75290021898B /* AppDelegate.m */; };
 		B051D2E51DDD75290021898B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2E21DDD75290021898B /* main.m */; };
 		B051D2E81DDD75460021898B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B051D2E61DDD75460021898B /* Main.storyboard */; };
-		B051D2EA1DDD75750021898B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B051D2E91DDD75750021898B /* Info.plist */; };
 		B051D2ED1DDD78860021898B /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2EC1DDD78860021898B /* ProductModel.m */; };
 		B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F01DDD7A0B0021898B /* NSDictionary+SafeExtract.m */; };
 		B051D2F51DDD7C480021898B /* JSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F41DDD7C480021898B /* JSONObject.m */; };
@@ -29,6 +27,10 @@
 		B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B51DDC269B00081807 /* Assets.xcassets */; };
 		B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */; };
 		B0C422CF1DDC269B00081807 /* BonobosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422CE1DDC269B00081807 /* BonobosUITests.m */; };
+		B0F3AA561DE0BB6B0061C785 /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3AA541DE0BB6B0061C785 /* CategoryTableViewCell.m */; };
+		B0F3AA571DE0BB6B0061C785 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F3AA551DE0BB6B0061C785 /* CategoryTableViewCell.xib */; };
+		B0F3AA5B1DE0C0440061C785 /* CategorySubcategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F3AA591DE0C0440061C785 /* CategorySubcategoryTableViewCell.m */; };
+		B0F3AA5C1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F3AA5A1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib */; };
 		E51644635BD7927255194EEC /* libPods-BonobosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEEF2ED7C3F29B5F1DAB734 /* libPods-BonobosTests.a */; };
 		F302073DF3FBC205DE932D23 /* libPods-BonobosUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EBC24FD099DE748AA6AF0A /* libPods-BonobosUITests.a */; };
 /* End PBXBuildFile section */
@@ -62,13 +64,12 @@
 		B02366ED1DDD548B008D2DB4 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesViewController.m; path = Controllers/CategoriesViewController.m; sourceTree = "<group>"; };
 		B02366EF1DDD5597008D2DB4 /* CategoriesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesService.h; path = Services/CategoriesService.h; sourceTree = "<group>"; };
 		B02366F01DDD5597008D2DB4 /* CategoriesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesService.m; path = Services/CategoriesService.m; sourceTree = "<group>"; };
-		B02366F31DDD58D6008D2DB4 /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryCollectionViewCell.h; path = Views/CategoryCollectionViewCell.h; sourceTree = "<group>"; };
-		B02366F41DDD58D6008D2DB4 /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryCollectionViewCell.m; path = Views/CategoryCollectionViewCell.m; sourceTree = "<group>"; };
-		B02366F51DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryCollectionViewCell.xib; path = Views/CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		B03BAC181DE0A957007C24D4 /* Harriet-Italics.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Harriet-Italics.ttf"; path = "Resources/Fonts/Harriet-Italics.ttf"; sourceTree = "<group>"; };
 		B03BAC191DE0A957007C24D4 /* Harriet.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Harriet.ttf; path = Resources/Fonts/Harriet.ttf; sourceTree = "<group>"; };
 		B03BAC1C1DE0AA2C007C24D4 /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CircularStd-Black.otf"; path = "Resources/Fonts/CircularStd-Black.otf"; sourceTree = "<group>"; };
 		B03BAC1D1DE0AA2C007C24D4 /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CircularStd-Medium.otf"; path = "Resources/Fonts/CircularStd-Medium.otf"; sourceTree = "<group>"; };
+		B03BAC211DE0AE93007C24D4 /* XCTestCase+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Utilities.h"; path = "Utilities/XCTestCase+Utilities.h"; sourceTree = "<group>"; };
+		B03BAC221DE0AE93007C24D4 /* XCTestCase+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Utilities.m"; path = "Utilities/XCTestCase+Utilities.m"; sourceTree = "<group>"; };
 		B051D2D71DDD5E410021898B /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryModel.h; path = Models/CategoryModel.h; sourceTree = "<group>"; };
 		B051D2D81DDD5E410021898B /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryModel.m; path = Models/CategoryModel.m; sourceTree = "<group>"; };
 		B051D2DA1DDD6CB30021898B /* ImageCacheService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageCacheService.h; path = Services/ImageCacheService.h; sourceTree = "<group>"; };
@@ -93,6 +94,12 @@
 		B0C422CA1DDC269B00081807 /* BonobosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonobosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C422CE1DDC269B00081807 /* BonobosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonobosUITests.m; sourceTree = "<group>"; };
 		B0C422D01DDC269B00081807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0F3AA531DE0BB6B0061C785 /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryTableViewCell.h; path = Views/CategoryTableViewCell.h; sourceTree = "<group>"; };
+		B0F3AA541DE0BB6B0061C785 /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryTableViewCell.m; path = Views/CategoryTableViewCell.m; sourceTree = "<group>"; };
+		B0F3AA551DE0BB6B0061C785 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryTableViewCell.xib; path = Views/CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		B0F3AA581DE0C0440061C785 /* CategorySubcategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategorySubcategoryTableViewCell.h; path = Views/CategorySubcategoryTableViewCell.h; sourceTree = "<group>"; };
+		B0F3AA591DE0C0440061C785 /* CategorySubcategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategorySubcategoryTableViewCell.m; path = Views/CategorySubcategoryTableViewCell.m; sourceTree = "<group>"; };
+		B0F3AA5A1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategorySubcategoryTableViewCell.xib; path = Views/CategorySubcategoryTableViewCell.xib; sourceTree = "<group>"; };
 		E3F29296A73A12D8294B5030 /* Pods-BonobosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BonobosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BonobosUITests/Pods-BonobosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FF5B583B9C630A94C18840AA /* Pods-Bonobos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonobos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonobos/Pods-Bonobos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,9 +178,12 @@
 		B02366F21DDD58BA008D2DB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B02366F31DDD58D6008D2DB4 /* CategoryCollectionViewCell.h */,
-				B02366F41DDD58D6008D2DB4 /* CategoryCollectionViewCell.m */,
-				B02366F51DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib */,
+				B0F3AA531DE0BB6B0061C785 /* CategoryTableViewCell.h */,
+				B0F3AA541DE0BB6B0061C785 /* CategoryTableViewCell.m */,
+				B0F3AA551DE0BB6B0061C785 /* CategoryTableViewCell.xib */,
+				B0F3AA581DE0C0440061C785 /* CategorySubcategoryTableViewCell.h */,
+				B0F3AA591DE0C0440061C785 /* CategorySubcategoryTableViewCell.m */,
+				B0F3AA5A1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -195,6 +205,15 @@
 				B03BAC191DE0A957007C24D4 /* Harriet.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		B03BAC201DE0AE69007C24D4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B03BAC211DE0AE93007C24D4 /* XCTestCase+Utilities.h */,
+				B03BAC221DE0AE93007C24D4 /* XCTestCase+Utilities.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		B051D2DD1DDD75040021898B /* Application */ = {
@@ -276,6 +295,7 @@
 		B0C422CD1DDC269B00081807 /* BonobosUITests */ = {
 			isa = PBXGroup;
 			children = (
+				B03BAC201DE0AE69007C24D4 /* Utilities */,
 				B0C422CE1DDC269B00081807 /* BonobosUITests.m */,
 				B0C422D01DDC269B00081807 /* Info.plist */,
 			);
@@ -371,7 +391,7 @@
 				TargetAttributes = {
 					B0C422A51DDC269B00081807 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8CM9FHQ3D4;
+						DevelopmentTeam = C68TYA9VUZ;
 						ProvisioningStyle = Automatic;
 					};
 					B0C422BE1DDC269B00081807 = {
@@ -413,12 +433,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B02366F71DDD58D6008D2DB4 /* CategoryCollectionViewCell.xib in Resources */,
 				B051D2E81DDD75460021898B /* Main.storyboard in Resources */,
+				B0F3AA571DE0BB6B0061C785 /* CategoryTableViewCell.xib in Resources */,
+				B0F3AA5C1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib in Resources */,
 				B03BAC1F1DE0AA2C007C24D4 /* CircularStd-Medium.otf in Resources */,
 				B03BAC1A1DE0A957007C24D4 /* Harriet-Italics.ttf in Resources */,
 				B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */,
-				B051D2EA1DDD75750021898B /* Info.plist in Resources */,
 				B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */,
 				B03BAC1E1DE0AA2C007C24D4 /* CircularStd-Black.otf in Resources */,
 				B03BAC1B1DE0A957007C24D4 /* Harriet.ttf in Resources */,
@@ -585,12 +605,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */,
-				B02366F61DDD58D6008D2DB4 /* CategoryCollectionViewCell.m in Sources */,
 				B051D2F51DDD7C480021898B /* JSONObject.m in Sources */,
 				B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */,
 				B051D2E31DDD75290021898B /* AppDelegate.m in Sources */,
 				B051D2ED1DDD78860021898B /* ProductModel.m in Sources */,
 				B051D2D91DDD5E410021898B /* CategoryModel.m in Sources */,
+				B0F3AA5B1DE0C0440061C785 /* CategorySubcategoryTableViewCell.m in Sources */,
+				B0F3AA561DE0BB6B0061C785 /* CategoryTableViewCell.m in Sources */,
 				B02366F11DDD5597008D2DB4 /* CategoriesService.m in Sources */,
 				B051D2E51DDD75290021898B /* main.m in Sources */,
 				B02366EE1DDD548B008D2DB4 /* CategoriesViewController.m in Sources */,
@@ -610,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C422CF1DDC269B00081807 /* BonobosUITests.m in Sources */,
+				B03BAC231DE0AE93007C24D4 /* XCTestCase+Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +688,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -713,6 +736,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -741,7 +765,7 @@
 			baseConfigurationReference = FF5B583B9C630A94C18840AA /* Pods-Bonobos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				DEVELOPMENT_TEAM = C68TYA9VUZ;
 				INFOPLIST_FILE = Bonobos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.Bonobos;
@@ -754,7 +778,7 @@
 			baseConfigurationReference = 963A8DBA5411F0361307261D /* Pods-Bonobos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				DEVELOPMENT_TEAM = C68TYA9VUZ;
 				INFOPLIST_FILE = Bonobos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.Bonobos;

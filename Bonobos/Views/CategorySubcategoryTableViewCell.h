@@ -1,8 +1,8 @@
 //
-//  CategoryCollectionViewCell.h
+//  CategorySubcategoryTableViewCell.h
 //  Bonobos
 //
-//  Created by Steven Diaz on 11/16/16.
+//  Created by Steven Diaz on 11/19/16.
 //  Copyright © 2016 Steven Diaz. All rights reserved.
 //
 
@@ -10,7 +10,6 @@
 
 @class CategoryModel;
 
-@interface CategoryCollectionViewCell : UICollectionViewCell
+@interface CategorySubcategoryTableViewCell : UITableViewCell
 @property (nonatomic, strong) CategoryModel *categoryModel;
-
 @end

@@ -9,16 +9,19 @@
 #import "CategoriesViewController.h"
 
 #import "CategoriesService.h"
-#import "CategoryCollectionViewCell.h"
+#import "CategoryTableViewCell.h"
+#import "CategoryModel.h"
 
 NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 
-@interface CategoriesViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface CategoriesViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong, readonly) CategoriesService *categoriesService;
 @property (nonatomic, strong, readonly) NSArray *categoryPathNames;
 @property (nonatomic, strong, readonly) NSArray *categories;
 
-@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+@property (nonatomic, assign) NSInteger categoryRequestIndex;
 @end
 
 @implementation CategoriesViewController
@@ -28,10 +31,10 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
     
     [self styleNavigationBar];
     [self setupCategoryService];
-    [self setupCollectionView];
+    [self setupTableView];
     
     _categories = [NSArray new];
-    [self fetchCategories];
+    [self fetchNextCategory];
 }
 
 - (void)styleNavigationBar {
@@ -53,25 +56,29 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
                            @"accessories",
                            @"shoes"
                            ];
+    
+    self.categoryRequestIndex = 0;
 }
 
-- (void)setupCollectionView {
-    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CategoryCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:CategoryCellReuseIdentifier];
-    [self.collectionView setContentInset:UIEdgeInsetsZero];
+- (void)setupTableView {
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CategoryTableViewCell class]) bundle:nil] forCellReuseIdentifier:CategoryCellReuseIdentifier];
+    //self.tableView.rowHeight = UITableViewAutomaticDimension;
+    [self.tableView setContentInset:UIEdgeInsetsZero];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
 }
 
 #pragma mark - Network Operations
 
-- (void)fetchCategories {
-    for (NSString *path in self.categoryPathNames) {
-        __weak typeof (self) weakSelf = self;
-        [self.categoriesService getCategory:path success:^(CategoryModel *category) {
-            [weakSelf insertCellForCategory:category];
-        } failure:^(NSError *error) {
-            NSLog(@"%@", error.localizedDescription);
-        }];
-    }
+- (void)fetchNextCategory {
+    if (self.categoryRequestIndex == self.categoryPathNames.count) return;
+    
+    NSString *categoryToFetch = [self.categoryPathNames objectAtIndex:self.categoryRequestIndex];
+    __weak typeof (self) weakSelf = self;
+    [self.categoriesService getCategory:categoryToFetch success:^(CategoryModel *category) {
+        [weakSelf insertCellForCategory:category];
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
 }
 
 #pragma mark - Cell Insertion
@@ -82,38 +89,35 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
     
     _categories = mutableCategories.copy;
     
-    [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.categories.count - 1 inSection:0]]];
-}
-
-#pragma mark - UICollectionViewDelegateFlowLayout
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(self.collectionView.frame.size.width, 200);
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 20;
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 50;
+    [self.tableView beginUpdates];
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.categories.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    [self.tableView endUpdates];
+    
+    self.categoryRequestIndex++;
+    [self fetchNextCategory];
 }
 
 #pragma mark - UICollectionViewDataSource
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.categories.count;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CategoryCollectionViewCell *categoryCell = [collectionView dequeueReusableCellWithReuseIdentifier:CategoryCellReuseIdentifier forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CategoryTableViewCell *categoryCell = [tableView dequeueReusableCellWithIdentifier:CategoryCellReuseIdentifier forIndexPath:indexPath];
     categoryCell.categoryModel = [self.categories objectAtIndex:indexPath.row];
     return categoryCell;
 }
 
-#pragma mark - UICollectionViewDelegate
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CategoryModel *categoryModel = [self.categories objectAtIndex:indexPath.row];
+    return 170 + (64 * categoryModel.subCategories.count);
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
 
