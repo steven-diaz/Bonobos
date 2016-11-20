@@ -862,7 +862,7 @@
 				DEVELOPMENT_TEAM = C68TYA9VUZ;
 				INFOPLIST_FILE = Bonobos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.Bonobos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.bonobos.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -875,7 +875,7 @@
 				DEVELOPMENT_TEAM = C68TYA9VUZ;
 				INFOPLIST_FILE = Bonobos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.Bonobos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.bonobos.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
