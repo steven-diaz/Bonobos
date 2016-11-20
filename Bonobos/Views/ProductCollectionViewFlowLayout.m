@@ -8,7 +8,7 @@
 
 #import "ProductCollectionViewFlowLayout.h"
 
-CGFloat const CellHeightRatio= 1.45;
+CGFloat const CellHeightRatio= 1.5;
 
 @implementation ProductCollectionViewFlowLayout
 
