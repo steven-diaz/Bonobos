@@ -8,6 +8,8 @@
 
 #import "CategoryTableViewCell.h"
 
+#import "LoadingImageView.h"
+
 #import "CategoryModel.h"
 #import "CategorySubcategoryTableViewCell.h"
 
@@ -20,7 +22,7 @@ NSInteger const CategoryCellFooterHeight = 14;
 NSString * const CategorySubcategoryCellReuseIdentifier = @"CategorySubcategoryCellReuseIdentifier";
 
 @interface CategoryTableViewCell () <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) IBOutlet UIImageView *backgroundImage;
+@property (nonatomic, strong) IBOutlet LoadingImageView *backgroundImage;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, strong) IBOutlet UITableView *subcategoryTableView;
@@ -49,12 +51,7 @@ NSString * const CategorySubcategoryCellReuseIdentifier = @"CategorySubcategoryC
     self.descriptionLabel.text = categoryModel.categoryDescription;
     
     [self.backgroundImage setImage:nil];
-    if (categoryModel.imageURL != nil) {
-        __weak typeof (self) weakSelf = self;
-        [[ImageCacheService instance] asyncImageForURL:categoryModel.imageURL completion:^(UIImage *image) {
-            [weakSelf.backgroundImage setImage:image];
-        }];
-    }
+    [self.backgroundImage setImageURL:categoryModel.imageURL];
 }
 
 #pragma mark - UITableViewDataSource

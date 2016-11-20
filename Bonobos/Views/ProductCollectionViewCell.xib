@@ -27,12 +27,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="245" height="350"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-Mb-PWW">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="py1-sZ-uEg" userLabel="Loading Image View" customClass="LoadingImageView">
                         <rect key="frame" x="0.0" y="0.0" width="245" height="245"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="ZHi-Mb-PWW" secondAttribute="height" multiplier="1:1" id="pVS-E1-iKC"/>
+                            <constraint firstAttribute="width" secondItem="py1-sZ-uEg" secondAttribute="height" multiplier="1:1" id="tD5-MJ-Aqm"/>
                         </constraints>
-                    </imageView>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfb-rw-hKS">
                         <rect key="frame" x="16" y="257" width="213" height="16.5"/>
                         <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="13"/>
@@ -56,24 +57,24 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="cfb-rw-hKS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="15d-0o-TSE"/>
-                <constraint firstItem="ZHi-Mb-PWW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="BSN-uh-Rp5"/>
+                <constraint firstItem="py1-sZ-uEg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="93s-z2-gLY"/>
+                <constraint firstItem="py1-sZ-uEg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DKa-oX-X4d"/>
                 <constraint firstAttribute="trailing" secondItem="cfb-rw-hKS" secondAttribute="trailing" constant="16" id="Nh6-n8-stm"/>
                 <constraint firstItem="Yqf-d9-9PA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Tq8-iO-bYg"/>
                 <constraint firstItem="Yqf-d9-9PA" firstAttribute="top" secondItem="Z7y-fU-N7g" secondAttribute="bottom" constant="4" id="Vgb-Nx-C0k"/>
                 <constraint firstItem="Z7y-fU-N7g" firstAttribute="top" secondItem="cfb-rw-hKS" secondAttribute="bottom" constant="4" id="X2b-oj-D9V"/>
-                <constraint firstItem="cfb-rw-hKS" firstAttribute="top" secondItem="ZHi-Mb-PWW" secondAttribute="bottom" constant="12" id="Xtz-wl-Kax"/>
-                <constraint firstItem="ZHi-Mb-PWW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="b6E-7f-aDN"/>
+                <constraint firstItem="cfb-rw-hKS" firstAttribute="top" secondItem="py1-sZ-uEg" secondAttribute="bottom" constant="12" id="eEx-fQ-llH"/>
                 <constraint firstItem="Z7y-fU-N7g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fP0-4L-ey5"/>
+                <constraint firstAttribute="trailing" secondItem="py1-sZ-uEg" secondAttribute="trailing" id="lzz-N3-Ksj"/>
                 <constraint firstAttribute="trailing" secondItem="Z7y-fU-N7g" secondAttribute="trailing" id="nUY-Oa-zcc"/>
                 <constraint firstAttribute="trailing" secondItem="Yqf-d9-9PA" secondAttribute="trailing" id="rjF-ZG-b8M"/>
-                <constraint firstAttribute="trailing" secondItem="ZHi-Mb-PWW" secondAttribute="trailing" id="xgh-sD-ubs"/>
             </constraints>
             <size key="customSize" width="245" height="350"/>
             <connections>
                 <outlet property="descriptionLabel" destination="Z7y-fU-N7g" id="OjQ-4S-Ubt"/>
                 <outlet property="nameLabel" destination="cfb-rw-hKS" id="rR3-DU-Poi"/>
                 <outlet property="priceLabel" destination="Yqf-d9-9PA" id="c0u-Qv-Biq"/>
-                <outlet property="productImage" destination="ZHi-Mb-PWW" id="b6E-oO-i3z"/>
+                <outlet property="productImage" destination="py1-sZ-uEg" id="Ym8-1y-hdv"/>
             </connections>
             <point key="canvasLocation" x="131.5" y="204"/>
         </collectionViewCell>

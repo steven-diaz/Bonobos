@@ -39,6 +39,8 @@
         if (product != nil) [products addObject:product];
     }
     
+    if (subCategories.count == 0 && products.count == 0) return nil;
+    
     return [[CategoryModel alloc] initWithName:name description:description imageURL:imageURL subCategories:subCategories products:products];
 }
 

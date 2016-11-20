@@ -10,10 +10,12 @@
 
 #import "ProductModel.h"
 
+#import "LoadingImageView.h"
+
 #import "ImageCacheService.h"
 
 @interface ProductCollectionViewCell()
-@property (nonatomic, strong) IBOutlet UIImageView *productImage;
+@property (nonatomic, strong) IBOutlet LoadingImageView *productImage;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;
 @property (nonatomic, strong) IBOutlet UILabel *priceLabel;
@@ -25,12 +27,7 @@
     _product = product;
     
     [self.productImage setImage:nil];
-    if (self.product.imageURL != nil) {
-        __weak typeof (self) weakSelf = self;
-        [[ImageCacheService instance] asyncImageForURL:self.product.imageURL completion:^(UIImage *image) {
-            [weakSelf.productImage setImage:image];
-        }];
-    }
+    [self.productImage setImageURL:product.imageURL];
     
     self.nameLabel.text = product.name;
     self.descriptionLabel.text = product.productDescription;

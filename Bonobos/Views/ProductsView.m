@@ -6,53 +6,60 @@
 //  Copyright © 2016 Steven Diaz. All rights reserved.
 //
 
-#import "ProductsViewController.h"
+#import "ProductsView.h"
 
 #import "ImageCacheService.h"
 
 #import "CategoryModel.h"
 #import "ProductModel.h"
 
+#import "LoadingImageView.h"
+
 #import "ProductCollectionViewCell.h"
 #import "ProductCollectionViewFlowLayout.h"
 
 #import "UIColor+Extended.h"
 
+#import "Masonry.h"
+
 NSString * const ProductCollectionViewCellReuseIdentifier = @"ProductCollectionViewCell";
 
-@interface ProductsViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
-@property (nonatomic, strong) IBOutlet UIImageView *categoryImageView;
+@interface ProductsView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@property (nonatomic, strong) IBOutlet UIView *productsView;
+@property (nonatomic, strong) IBOutlet LoadingImageView *categoryImageView;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *categoryImageViewHeightConstraint;
 @property (nonatomic, strong) IBOutlet UIView *categoryDescriptionView;
 @property (nonatomic, strong) IBOutlet UILabel *categoryNameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *categoryDescriptionLabel;
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *collectionViewHeightConstraint;
+
+@property (nonatomic, strong) CategoryModel *category;
 @end
 
-@implementation ProductsViewController
+@implementation ProductsView
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self styleNavigationBar];
-    [self styleUI];
-    [self setupCollectionView];
-    [self populateUI];
+- (instancetype)initWithCategory:(CategoryModel *)category {
+    self = [super init];
+    if (self) {
+        [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ProductsView class]) owner:self options:nil];
+        [self addSubview:self.productsView];
+        
+        [self.productsView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self);
+        }];
+        
+        _category = category;
+        
+        [self styleUI];
+        [self setupCollectionView];
+        [self populateUI];
+    }
+    return self;
 }
 
 - (void)dealloc {
     [self.collectionView removeObserver:self forKeyPath:@"contentSize"];
-}
-
-- (void)styleNavigationBar {
-    self.navigationItem.title = self.category.name.uppercaseString;
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    self.collectionView.collectionViewLayout = [[ProductCollectionViewFlowLayout alloc] init];
 }
 
 - (void)styleUI {
@@ -60,23 +67,30 @@ NSString * const ProductCollectionViewCellReuseIdentifier = @"ProductCollectionV
     self.categoryDescriptionView.layer.borderColor = [UIColor bonobosLightGrey].CGColor;
     
     [self.collectionView setContentInset:UIEdgeInsetsZero];
-    [self setAutomaticallyAdjustsScrollViewInsets:NO];
 }
 
 - (void)setupCollectionView {
+    self.collectionView.collectionViewLayout = [[ProductCollectionViewFlowLayout alloc] init];
     [self.collectionView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:NULL];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ProductCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:ProductCollectionViewCellReuseIdentifier];
 }
 
 - (void)populateUI {
     self.categoryNameLabel.text = self.category.name.uppercaseString;
-    self.categoryDescriptionLabel.text = self.category.categoryDescription;
+    
+    if (self.category.categoryDescription == nil) {
+        [self.categoryDescriptionView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.categoryNameLabel).offset(30);
+        }];
+    } else {
+        self.categoryDescriptionLabel.text = self.category.categoryDescription;
+        [self.categoryDescriptionView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.categoryDescriptionLabel).offset(30);
+        }];
+    }
     
     if (self.category.imageURL != nil) {
-        __weak typeof (self) weakSelf = self;
-        [[ImageCacheService instance] asyncImageForURL:self.category.imageURL completion:^(UIImage *image) {
-            [weakSelf.categoryImageView setImage:image];
-        }];
+        [self.categoryImageView setImageURL:self.category.imageURL];
     } else {
         self.categoryImageViewHeightConstraint.constant = 0;
     }
@@ -105,6 +119,9 @@ NSString * const ProductCollectionViewCellReuseIdentifier = @"ProductCollectionV
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if(object == self.collectionView && [keyPath isEqualToString:@"contentSize"]) {
         self.collectionViewHeightConstraint.constant = self.collectionView.collectionViewLayout.collectionViewContentSize.height;
+        [self mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(self.collectionView);
+        }];
     }
 }
 

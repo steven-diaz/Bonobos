@@ -29,15 +29,16 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9L1-CN-3nY" userLabel="Header View">
                         <rect key="frame" x="0.0" y="0.0" width="522" height="170"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="adk-Lh-uB1">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLc-ve-m2Y" userLabel="Loading Image View" customClass="LoadingImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="522" height="170"/>
-                            </imageView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhE-dx-Ykn">
                                 <rect key="frame" x="0.0" y="0.0" width="522" height="170"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66k-OL-Grf" userLabel="Labels">
-                                <rect key="frame" x="20" y="52.5" width="482" height="66.5"/>
+                                <rect key="frame" x="20" y="52" width="482" height="66.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqj-yo-VKf">
                                         <rect key="frame" x="0.0" y="0.0" width="482" height="35.5"/>
@@ -66,13 +67,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="adk-Lh-uB1" firstAttribute="top" secondItem="9L1-CN-3nY" secondAttribute="top" id="H76-BK-nyb"/>
+                            <constraint firstAttribute="trailing" secondItem="HLc-ve-m2Y" secondAttribute="trailing" id="2vy-Bj-daZ"/>
+                            <constraint firstAttribute="bottom" secondItem="HLc-ve-m2Y" secondAttribute="bottom" id="Bfb-BS-lYu"/>
+                            <constraint firstItem="HLc-ve-m2Y" firstAttribute="leading" secondItem="9L1-CN-3nY" secondAttribute="leading" id="HTD-VS-pnu"/>
                             <constraint firstAttribute="trailing" secondItem="66k-OL-Grf" secondAttribute="trailing" constant="20" id="It7-69-DNY"/>
                             <constraint firstAttribute="bottom" secondItem="DhE-dx-Ykn" secondAttribute="bottom" id="JZO-Qo-caH"/>
+                            <constraint firstItem="HLc-ve-m2Y" firstAttribute="top" secondItem="9L1-CN-3nY" secondAttribute="top" id="VOh-uN-zxR"/>
                             <constraint firstItem="DhE-dx-Ykn" firstAttribute="leading" secondItem="9L1-CN-3nY" secondAttribute="leading" id="WQq-G9-UTp"/>
-                            <constraint firstItem="adk-Lh-uB1" firstAttribute="leading" secondItem="9L1-CN-3nY" secondAttribute="leading" id="fTF-Fi-1Yo"/>
-                            <constraint firstAttribute="trailing" secondItem="adk-Lh-uB1" secondAttribute="trailing" id="hsZ-KT-I6t"/>
-                            <constraint firstAttribute="bottom" secondItem="adk-Lh-uB1" secondAttribute="bottom" id="lUh-TV-3Px"/>
                             <constraint firstItem="DhE-dx-Ykn" firstAttribute="top" secondItem="9L1-CN-3nY" secondAttribute="top" id="qKY-QO-dJC"/>
                             <constraint firstAttribute="height" constant="170" id="rXW-84-47I"/>
                             <constraint firstItem="66k-OL-Grf" firstAttribute="leading" secondItem="9L1-CN-3nY" secondAttribute="leading" constant="20" id="rin-nd-xQ2"/>
@@ -104,7 +105,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="backgroundImage" destination="adk-Lh-uB1" id="kov-eM-GUG"/>
+                <outlet property="backgroundImage" destination="HLc-ve-m2Y" id="HVr-Li-3ae"/>
                 <outlet property="descriptionLabel" destination="lXt-Hs-S4D" id="6wr-jw-vxi"/>
                 <outlet property="nameLabel" destination="uqj-yo-VKf" id="AdQ-eE-jEZ"/>
                 <outlet property="subcategoryTableView" destination="HwF-Mb-1Y4" id="2WG-2d-eKM"/>

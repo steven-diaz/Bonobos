@@ -10,6 +10,8 @@
 
 @class CategoryModel;
 
-@interface ProductsViewController : UIViewController
-@property (nonatomic, strong) CategoryModel *category;
+@interface ProductsView : UIView
+
+- (instancetype)initWithCategory:(CategoryModel *)category;
+
 @end

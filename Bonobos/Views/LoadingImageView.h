@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoadingImageView : UIImageView
+@interface LoadingImageView : UIView
+
+- (void)setImage:(UIImage *)image;
+- (void)setImageURL:(NSURL *)url;
 
 @end

@@ -31,7 +31,9 @@
 		B051D2F51DDD7C480021898B /* JSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F41DDD7C480021898B /* JSONObject.m */; };
 		B051D2F71DDD7FCA0021898B /* ImageCacheServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B051D2F61DDD7FCA0021898B /* ImageCacheServiceTests.m */; };
 		B052B21A1DE0DF9C00EAB74E /* UIColor+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = B052B2191DE0DF9C00EAB74E /* UIColor+Extended.m */; };
-		B052B21D1DE0E9C900EAB74E /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B052B21C1DE0E9C900EAB74E /* ProductsViewController.m */; };
+		B052B21D1DE0E9C900EAB74E /* SubCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B052B21C1DE0E9C900EAB74E /* SubCategoryViewController.m */; };
+		B09DAF8B1DE1295C007DD19A /* ProductsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B09DAF8A1DE1295C007DD19A /* ProductsView.m */; };
+		B09DAF8D1DE12968007DD19A /* ProductsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09DAF8C1DE12968007DD19A /* ProductsView.xib */; };
 		B0C422B61DDC269B00081807 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B51DDC269B00081807 /* Assets.xcassets */; };
 		B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C422B71DDC269B00081807 /* LaunchScreen.storyboard */; };
 		B0C422CF1DDC269B00081807 /* BonobosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C422CE1DDC269B00081807 /* BonobosUITests.m */; };
@@ -102,8 +104,11 @@
 		B051D2F61DDD7FCA0021898B /* ImageCacheServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCacheServiceTests.m; sourceTree = "<group>"; };
 		B052B2181DE0DF9C00EAB74E /* UIColor+Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Extended.h"; path = "Categories/UIColor+Extended.h"; sourceTree = "<group>"; };
 		B052B2191DE0DF9C00EAB74E /* UIColor+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Extended.m"; path = "Categories/UIColor+Extended.m"; sourceTree = "<group>"; };
-		B052B21B1DE0E9C900EAB74E /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsViewController.h; path = Controllers/ProductsViewController.h; sourceTree = "<group>"; };
-		B052B21C1DE0E9C900EAB74E /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductsViewController.m; path = Controllers/ProductsViewController.m; sourceTree = "<group>"; };
+		B052B21B1DE0E9C900EAB74E /* SubCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubCategoryViewController.h; path = Controllers/SubCategoryViewController.h; sourceTree = "<group>"; };
+		B052B21C1DE0E9C900EAB74E /* SubCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubCategoryViewController.m; path = Controllers/SubCategoryViewController.m; sourceTree = "<group>"; };
+		B09DAF891DE1295C007DD19A /* ProductsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsView.h; path = Views/ProductsView.h; sourceTree = "<group>"; };
+		B09DAF8A1DE1295C007DD19A /* ProductsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductsView.m; path = Views/ProductsView.m; sourceTree = "<group>"; };
+		B09DAF8C1DE12968007DD19A /* ProductsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductsView.xib; path = Views/ProductsView.xib; sourceTree = "<group>"; };
 		B0C422A61DDC269B00081807 /* Bonobos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonobos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0C422B51DDC269B00081807 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0C422B81DDC269B00081807 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -193,8 +198,8 @@
 			children = (
 				B02366EC1DDD548B008D2DB4 /* CategoriesViewController.h */,
 				B02366ED1DDD548B008D2DB4 /* CategoriesViewController.m */,
-				B052B21B1DE0E9C900EAB74E /* ProductsViewController.h */,
-				B052B21C1DE0E9C900EAB74E /* ProductsViewController.m */,
+				B052B21B1DE0E9C900EAB74E /* SubCategoryViewController.h */,
+				B052B21C1DE0E9C900EAB74E /* SubCategoryViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 		B02366F21DDD58BA008D2DB4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B09DAF881DE12949007DD19A /* Products */,
 				B036957E1DE0FFD90006267A /* Layout */,
 				B0F3AA601DE0D9670061C785 /* Loading */,
 				B03695781DE0FB2C0006267A /* Product Cells */,
@@ -285,6 +291,16 @@
 				B052B2191DE0DF9C00EAB74E /* UIColor+Extended.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		B09DAF881DE12949007DD19A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B09DAF891DE1295C007DD19A /* ProductsView.h */,
+				B09DAF8A1DE1295C007DD19A /* ProductsView.m */,
+				B09DAF8C1DE12968007DD19A /* ProductsView.xib */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B0C4229D1DDC269B00081807 = {
@@ -505,6 +521,7 @@
 				B0F3AA571DE0BB6B0061C785 /* CategoryTableViewCell.xib in Resources */,
 				B0F3AA5C1DE0C0440061C785 /* CategorySubcategoryTableViewCell.xib in Resources */,
 				B03BAC1F1DE0AA2C007C24D4 /* CircularStd-Medium.otf in Resources */,
+				B09DAF8D1DE12968007DD19A /* ProductsView.xib in Resources */,
 				B03BAC1A1DE0A957007C24D4 /* Harriet-Italics.ttf in Resources */,
 				B036957D1DE0FB470006267A /* ProductCollectionViewCell.xib in Resources */,
 				B0C422B91DDC269B00081807 /* LaunchScreen.storyboard in Resources */,
@@ -677,7 +694,8 @@
 				B051D2F11DDD7A0B0021898B /* NSDictionary+SafeExtract.m in Sources */,
 				B036957C1DE0FB470006267A /* ProductCollectionViewCell.m in Sources */,
 				B052B21A1DE0DF9C00EAB74E /* UIColor+Extended.m in Sources */,
-				B052B21D1DE0E9C900EAB74E /* ProductsViewController.m in Sources */,
+				B052B21D1DE0E9C900EAB74E /* SubCategoryViewController.m in Sources */,
+				B09DAF8B1DE1295C007DD19A /* ProductsView.m in Sources */,
 				B0F3AA5F1DE0D9620061C785 /* LoadingView.m in Sources */,
 				B051D2F51DDD7C480021898B /* JSONObject.m in Sources */,
 				B051D2DC1DDD6CB30021898B /* ImageCacheService.m in Sources */,

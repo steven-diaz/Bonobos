@@ -11,7 +11,7 @@
 #import "CategoriesService.h"
 #import "CategoryModel.h"
 
-#import "ProductsViewController.h"
+#import "SubCategoryViewController.h"
 #import "CategoryTableViewCell.h"
 #import "LoadingView.h"
 
@@ -55,15 +55,15 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
     
     // This is only necessary because we don't have an endpoint that returns all categories. We're hardcoding them here based on the categories shown on the site.
     _categoryPathNames = @[
-                           @"sale",
-                           @"goodsport",
-                           @"bottoms",
-                           @"tops",
-                           @"tailored",
-                           @"outerwear",
-                           @"golf",
+//                           @"sale",
+//                           @"goodsport",
+//                           @"bottoms",
+//                           @"tops",
+//                           @"tailored",
+//                           @"outerwear",
+//                           @"golf",
                            @"accessories",
-                           @"shoes"
+//                           @"shoes"
                            ];
     _categories = [NSMutableArray arrayWithArray:_categoryPathNames];
 }
@@ -159,10 +159,10 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 
 - (void)categoryTableViewCell:(CategoryTableViewCell *)cell didSelectCategory:(CategoryModel *)category {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ProductsViewController * productsVC = (ProductsViewController *)[sb instantiateViewControllerWithIdentifier:@"ProductsViewController"];
-    productsVC.category = category;
+    SubCategoryViewController * subcategoryVC = (SubCategoryViewController *)[sb instantiateViewControllerWithIdentifier:@"SubCategoryViewController"];
+    subcategoryVC.category = category;
     
-    [self.navigationController pushViewController:productsVC animated:YES];
+    [self.navigationController pushViewController:subcategoryVC animated:YES];
 }
 
 @end
