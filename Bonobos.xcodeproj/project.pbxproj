@@ -480,13 +480,13 @@
 					};
 					B0C422BE1DDC269B00081807 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8CM9FHQ3D4;
+						DevelopmentTeam = C68TYA9VUZ;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B0C422A51DDC269B00081807;
 					};
 					B0C422C91DDC269B00081807 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 8CM9FHQ3D4;
+						DevelopmentTeam = C68TYA9VUZ;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B0C422A51DDC269B00081807;
 					};
@@ -885,7 +885,7 @@
 			baseConfigurationReference = A3A185EDCAA8B20A120F48BE /* Pods-BonobosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				DEVELOPMENT_TEAM = C68TYA9VUZ;
 				INFOPLIST_FILE = BonobosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.BonobosTests;
@@ -899,7 +899,7 @@
 			baseConfigurationReference = 24B299852C298300A9F22063 /* Pods-BonobosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				DEVELOPMENT_TEAM = C68TYA9VUZ;
 				INFOPLIST_FILE = BonobosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.BonobosTests;
@@ -912,7 +912,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98F27D4CF10ADECB1D79A759 /* Pods-BonobosUITests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				DEVELOPMENT_TEAM = C68TYA9VUZ;
 				INFOPLIST_FILE = BonobosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.BonobosUITests;
@@ -925,7 +925,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3F29296A73A12D8294B5030 /* Pods-BonobosUITests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 8CM9FHQ3D4;
+				DEVELOPMENT_TEAM = C68TYA9VUZ;
 				INFOPLIST_FILE = BonobosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sdiaz.BonobosUITests;

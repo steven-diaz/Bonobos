@@ -50,6 +50,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <accessibility key="accessibilityConfiguration" label="LoadingView"/>
             <constraints>
                 <constraint firstItem="dE8-iK-fOv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="47" id="em9-Tq-mhK"/>
                 <constraint firstItem="dE8-iK-fOv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uwU-ne-xhf"/>

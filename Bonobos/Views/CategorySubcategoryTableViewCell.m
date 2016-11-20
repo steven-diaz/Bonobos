@@ -22,6 +22,7 @@
     _categoryModel = categoryModel;
     
     self.nameLabel.text = categoryModel.name.capitalizedString;
+    self.accessibilityIdentifier = categoryModel.name.lowercaseString;
 }
 
 @end
