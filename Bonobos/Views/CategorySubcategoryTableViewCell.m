@@ -19,7 +19,7 @@
 - (void)setCategoryModel:(CategoryModel *)categoryModel {
     _categoryModel = categoryModel;
     
-    self.nameLabel.text = categoryModel.name;
+    self.nameLabel.text = categoryModel.name.capitalizedString;
 }
 
 @end

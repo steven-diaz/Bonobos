@@ -55,15 +55,16 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
     
     // This is only necessary because we don't have an endpoint that returns all categories. We're hardcoding them here based on the categories shown on the site.
     _categoryPathNames = @[
-//                           @"sale",
-//                           @"goodsport",
-//                           @"bottoms",
-//                           @"tops",
-//                           @"tailored",
-//                           @"outerwear",
-//                           @"golf",
+                           @"holiday",
+                           @"sale",
+                           @"goodsport",
+                           @"bottoms",
+                           @"tops",
+                           @"tailored",
+                           @"outerwear",
+                           @"golf",
                            @"accessories",
-//                           @"shoes"
+                           @"shoes"
                            ];
     _categories = [NSMutableArray arrayWithArray:_categoryPathNames];
 }
