@@ -48,6 +48,9 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 
 - (void)styleNavigationBar {
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bonobos_logo"]];
+
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"briefcase"]]];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)setupCategoryService {

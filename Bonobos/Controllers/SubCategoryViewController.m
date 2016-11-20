@@ -32,6 +32,8 @@
     self.navigationItem.title = self.category.name.uppercaseString;
     
     self.navigationController.navigationBar.topItem.title = @"";
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"briefcase"]]];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)populateUI {
