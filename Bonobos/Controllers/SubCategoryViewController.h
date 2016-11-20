@@ -11,5 +11,7 @@
 @class CategoryModel;
 
 @interface SubCategoryViewController : UIViewController
+
 @property (nonatomic, strong) CategoryModel *category;
+
 @end

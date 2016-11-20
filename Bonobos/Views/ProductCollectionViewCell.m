@@ -14,7 +14,7 @@
 
 #import "ImageCacheService.h"
 
-@interface ProductCollectionViewCell()
+@interface ProductCollectionViewCell ()
 @property (nonatomic, strong) IBOutlet LoadingImageView *productImage;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *descriptionLabel;

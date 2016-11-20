@@ -9,6 +9,7 @@
 #import "CategoriesViewController.h"
 
 #import "CategoriesService.h"
+
 #import "CategoryModel.h"
 
 #import "SubCategoryViewController.h"
@@ -20,16 +21,14 @@
 NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 
 @interface CategoriesViewController () <UITableViewDataSource, CategoryTableViewCellDelegate>
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 @property (nonatomic, strong, readonly) CategoriesService *categoriesService;
 @property (nonatomic, strong, readonly) NSArray *categoryPathNames;
 @property (nonatomic, strong, readonly) NSMutableArray *categories;
-
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
-
 @property (nonatomic, assign) NSInteger completedRequests;
 @property (nonatomic, strong) NSMutableArray *activeRequests;
 @property (nonatomic, assign) BOOL loading;
-
 @property (nonatomic, strong) LoadingView *loadingView;
 @end
 
@@ -48,7 +47,7 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
 
 - (void)styleNavigationBar {
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bonobos_logo"]];
-
+    
     UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"briefcase"]]];
     self.navigationItem.rightBarButtonItem = item;
 }
@@ -152,7 +151,6 @@ NSString * const CategoryCellReuseIdentifier = @"CategoryCellReuseIdentifier";
     categoryCell.categoryModel = [self.categories objectAtIndex:indexPath.row];
     return categoryCell;
 }
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CategoryModel *categoryModel = [self.categories objectAtIndex:indexPath.row];

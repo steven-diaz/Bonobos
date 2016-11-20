@@ -16,6 +16,13 @@ extern NSInteger const CategoryCellFooterHeight;
 
 @protocol CategoryTableViewCellDelegate <NSObject>
 
+/**
+ *  Called when a subCategory on a CategoryTableViewCell is selected.
+ *
+ *  @param cell The cell who owns the subCategory that was selected.
+ *
+ *  @param category The subCategory that was selected.
+ */
 - (void)categoryTableViewCell:(CategoryTableViewCell *)cell didSelectCategory:(CategoryModel *)category;
 
 @end
@@ -23,6 +30,7 @@ extern NSInteger const CategoryCellFooterHeight;
 @class CategoryModel;
 
 @interface CategoryTableViewCell : UITableViewCell
+
 @property (nonatomic, strong) CategoryModel *categoryModel;
 @property (nonatomic, weak) id<CategoryTableViewCellDelegate> delegate;
 

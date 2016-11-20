@@ -16,6 +16,7 @@
 
 @interface SubCategoryViewController ()
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
+
 @property (nonatomic, strong) NSMutableArray *productViews;
 @end
 

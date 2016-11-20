@@ -17,8 +17,8 @@ NSString * const CategoryAPIPath = @"https://api.bonobos.com/api/categories/";
 @implementation CategoriesService
 
 - (NSURLSessionTask *)getCategory:(NSString *)categoryName
-            success:(void (^)(CategoryModel *, NSURLSessionTask *))success
-            failure:(FailureBlock)failure {
+                          success:(void (^)(CategoryModel *, NSURLSessionTask *))success
+                          failure:(FailureBlock)failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSString *path = [NSString stringWithFormat:@"%@%@", CategoryAPIPath, categoryName];
     

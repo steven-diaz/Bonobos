@@ -11,5 +11,7 @@
 @class CategoryModel;
 
 @interface CategorySubcategoryTableViewCell : UITableViewCell
+
 @property (nonatomic, strong) CategoryModel *categoryModel;
+
 @end

@@ -13,7 +13,7 @@
 
 #import "UIColor+Extended.h"
 
-@interface LoadingView()
+@interface LoadingView ()
 @property (nonatomic, strong) IBOutlet UIView *loadingView;
 @property (nonatomic, strong) IBOutlet LLARingSpinnerView *spinnerView;
 @end

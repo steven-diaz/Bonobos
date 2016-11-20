@@ -10,6 +10,9 @@
 
 @interface JSONObject : NSObject
 
+/**
+ *  Override this initializer in subclasses to deserialize from JSON.
+ */
 + (instancetype)objectFromJSON:(NSDictionary *)json;
 
 @end

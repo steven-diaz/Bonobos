@@ -15,13 +15,13 @@
 @implementation ImageCacheService
 
 + (instancetype)instance {
-    static ImageCacheService *imageCache;
+    static ImageCacheService *imageCacheService;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        imageCache = [[ImageCacheService alloc] init];
+        imageCacheService = [[ImageCacheService alloc] init];
     });
     
-    return imageCache;
+    return imageCacheService;
 }
 
 - (instancetype)init {

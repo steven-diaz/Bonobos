@@ -10,8 +10,10 @@
 
 #import "CategoryModel.h"
 
-@interface CategorySubcategoryTableViewCell()
+@interface CategorySubcategoryTableViewCell ()
+
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
+
 @end
 
 @implementation CategorySubcategoryTableViewCell

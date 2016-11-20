@@ -9,20 +9,19 @@
 #import "ProductsView.h"
 
 #import "ImageCacheService.h"
+#import "UIColor+Extended.h"
 
 #import "CategoryModel.h"
 #import "ProductModel.h"
 
 #import "LoadingImageView.h"
-
 #import "ProductCollectionViewCell.h"
 #import "ProductCollectionViewFlowLayout.h"
-
-#import "UIColor+Extended.h"
 
 #import "Masonry.h"
 
 NSString * const ProductCollectionViewCellReuseIdentifier = @"ProductCollectionViewCell";
+NSString * const ContentSizeKeyPath = @"contentSize";
 
 @interface ProductsView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) IBOutlet UIView *productsView;
@@ -59,7 +58,7 @@ NSString * const ProductCollectionViewCellReuseIdentifier = @"ProductCollectionV
 }
 
 - (void)dealloc {
-    [self.collectionView removeObserver:self forKeyPath:@"contentSize"];
+    [self.collectionView removeObserver:self forKeyPath:ContentSizeKeyPath];
 }
 
 - (void)styleUI {
@@ -71,7 +70,7 @@ NSString * const ProductCollectionViewCellReuseIdentifier = @"ProductCollectionV
 
 - (void)setupCollectionView {
     self.collectionView.collectionViewLayout = [[ProductCollectionViewFlowLayout alloc] init];
-    [self.collectionView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.collectionView addObserver:self forKeyPath:ContentSizeKeyPath options:NSKeyValueObservingOptionNew context:NULL];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ProductCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:ProductCollectionViewCellReuseIdentifier];
 }
 
@@ -117,7 +116,7 @@ NSString * const ProductCollectionViewCellReuseIdentifier = @"ProductCollectionV
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
-    if(object == self.collectionView && [keyPath isEqualToString:@"contentSize"]) {
+    if(object == self.collectionView && [keyPath isEqualToString:ContentSizeKeyPath]) {
         self.collectionViewHeightConstraint.constant = self.collectionView.collectionViewLayout.collectionViewContentSize.height;
         [self mas_updateConstraints:^(MASConstraintMaker *make) {
             make.bottom.equalTo(self.collectionView);
